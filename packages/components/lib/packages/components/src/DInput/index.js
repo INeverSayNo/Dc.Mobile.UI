@@ -1,0 +1,1 @@
+var e=require(`./index.vue_vue_type_script_setup_true_lang.js`).default;exports.default=e;

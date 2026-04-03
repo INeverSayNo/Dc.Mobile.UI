@@ -1,0 +1,37 @@
+:root {
+    --vp-c-brand: #1890ff;
+    --vp-button-brand-border: #1890ff;
+    --vp-button-brand-hover-border: #40a9ff;
+    --vp-button-brand-hover-bg: #40a9ff;
+}
+.content-container{
+    max-width: 1400px !important;
+}
+.VPSidebar{
+    padding-left: 3rem !important;
+    width: 20rem !important;
+}
+.VPNavBar.has-sidebar .title{
+    padding-left: 3rem !important;
+}
+.VPContent.has-sidebar{
+    padding-left: 22rem !important;
+}
+.VPNavBar.has-sidebar .content{
+    background-color: white;
+}
+.el-popper{
+    &>span:first-child{
+        font-size: 16px !important;
+    }
+}
+.el-tooltip__trigger{
+    display: flex;
+    align-items: center;
+}
+.el-icon{
+    margin: 0 .4rem !important;
+}
+.code-box-demo{
+    background: #f0f4f9 !important;
+}

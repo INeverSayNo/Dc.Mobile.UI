@@ -1,0 +1,10 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "types": ["vant/**/*.d.ts", "dc-mobile-ui/global"]
+  },
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
