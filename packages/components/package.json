@@ -1,13 +1,13 @@
 {
   "name": "dc-mobile-ui",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "test",
   "module": "./src/index.ts",
   "types": "types/src/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "gulp -f build/gulpfile.js",
-    "publish": "npm publish --access public"
+    "publish": "npm publish"
   },
   "publishConfig": {
     "module": "es",
@@ -35,6 +35,5 @@
     "unocss": "^66.6.7"
   },
   "dependencies": {
-    "dc-tools": "^2.0.11"
   }
 }
