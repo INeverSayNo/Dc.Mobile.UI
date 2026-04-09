@@ -1,0 +1,1 @@
+const e=require(`../utils/withInstall.js`),t=require(`./index.js`);var n=e.withInstall(t.default);exports.default=n;
