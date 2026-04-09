@@ -3,9 +3,16 @@ import vue from "@vitejs/plugin-vue";
 import pxtorem from "postcss-pxtorem";
 import UnoCSS from "unocss/vite";
 import { presetWind3 } from "unocss";
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+   resolve: {
+    alias: {
+      // 本地开发时直接指向 components 源码，支持热更新
+      "dc-mobile-ui": resolve(__dirname, "../components/src/index.ts"),
+    },
+  },
   css: {
     postcss: {
       plugins: [
