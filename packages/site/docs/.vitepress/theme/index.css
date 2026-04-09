@@ -33,5 +33,12 @@
     margin: 0 .4rem !important;
 }
 .code-box-demo{
-    background: #f0f4f9 !important;
+    background: linear-gradient(45deg, #c4dbff, transparent) !important;
+    padding: 40px 200px !important;
+}
+
+.vp-doc .vp-raw p,
+.vp-doc .vp-raw summary {
+  margin: 0;
+  line-height: inherit;
 }

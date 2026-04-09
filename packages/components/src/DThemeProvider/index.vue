@@ -22,7 +22,7 @@ const cssVars = computed(() => ({
 </script>
 
 <template>
-  <ConfigProvider :theme-vars="themeVars" :style="cssVars">
+  <ConfigProvider :theme-vars="themeVars" :style="cssVars" class="dc-component">
     <slot />
   </ConfigProvider>
 </template>

@@ -8,6 +8,7 @@ import {
   getCurrentInstance,
   getCurrentScope,
   h,
+  init_vue_runtime_esm_bundler,
   inject,
   isReactive,
   isReadonly,
@@ -34,10 +35,12 @@ import {
   version,
   watch,
   watchEffect
-} from "./chunk-GX73TU4U.js";
+} from "./chunk-AB4CWU2G.js";
 import "./chunk-V4OQ3NZ2.js";
 
 // ../../node_modules/.pnpm/vitepress@1.3.3_@algolia+client-search@4.24.0_@types+node@22.5.0_async-validator@4.2.5_axios@_p43jonnjeccleyjrf432oepwwa/node_modules/vitepress/lib/vue-demi.mjs
+init_vue_runtime_esm_bundler();
+init_vue_runtime_esm_bundler();
 var isVue2 = false;
 var isVue3 = true;
 function set(target, key, val) {

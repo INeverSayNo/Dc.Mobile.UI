@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:c": "pnpm  --filter dc-mobile-ui build",
+    "publish:c": "pnpm  --filter dc-mobile-ui publish",
     "dev": "pnpm run --filter site dev",
     "start": "pnpm run --filter site start"
   },

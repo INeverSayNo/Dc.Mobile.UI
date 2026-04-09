@@ -1,13 +1,14 @@
 import {
   createHooks,
   debounce
-} from "./chunk-BMX2OU4I.js";
+} from "./chunk-67WIHQVL.js";
 import {
   computed,
   effectScope,
   getCurrentInstance,
   getCurrentScope,
   hasInjectionContext,
+  init_vue_runtime_esm_bundler,
   inject,
   isReactive,
   isRef,
@@ -21,8 +22,11 @@ import {
   toRefs,
   unref,
   watch
-} from "./chunk-GX73TU4U.js";
+} from "./chunk-AB4CWU2G.js";
 import "./chunk-V4OQ3NZ2.js";
+
+// ../../node_modules/.pnpm/pinia@3.0.4_typescript@6.0.2_vue@3.5.31_typescript@6.0.2_/node_modules/pinia/dist/pinia.mjs
+init_vue_runtime_esm_bundler();
 
 // ../../node_modules/.pnpm/@vue+devtools-shared@7.7.9/node_modules/@vue/devtools-shared/dist/index.js
 var __create = Object.create;

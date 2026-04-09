@@ -22,9 +22,11 @@ export default defineConfig({
     UnoCSS({
       configFile: false,
       prefix: "dc-",
-      presets: [presetWind3({
-        prefix: "dc-",
-      })],
+      presets: [
+        presetWind3({
+          prefix: "dc-",
+        }),
+      ],
       content: {
         filesystem: ["../components/src/**/*.{vue,ts}"],
       },
@@ -38,4 +40,12 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    watch: {
+      ignored: ["!**/packages/components/src/**"],
+    },
+  },
+  optimizeDeps: {
+    exclude: ["dc-mobile-ui"],
+  },
 });

@@ -34,7 +34,7 @@ export default defineConfig({
       },
     },
     server: {
-      port: 8001,
+      port: 8005,
     },
   },
   appearance: false, // 夜间模式切换
@@ -68,18 +68,18 @@ export default defineConfig({
               text: "搜索框 DSearch",
               link: "/components/DSearch",
             },
-            {
-              text: "输入框 DInput",
-              link: "/components/DInput",
-            },
           ],
         },
         {
           text: "静态组件",
           items: [
             {
-              text: "图标 DIcon",
-              link: "/components/DIcon",
+              text: "卡片 DCard",
+              link: "/components/DCard",
+            },
+            {
+              text: "单元格 DCell",
+              link: "/components/DCell",
             },
           ],
         },

@@ -6,7 +6,8 @@
   "types": "types/src/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "gulp -f build/gulpfile.js"
+    "build": "gulp -f build/gulpfile.js",
+    "publish": "npm publish --access public"
   },
   "publishConfig": {
     "module": "es",

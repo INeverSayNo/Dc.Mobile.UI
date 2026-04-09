@@ -1,33 +1,54 @@
 <script lang="ts" setup>
-import { Search } from "vant";
+import { Search, searchProps } from "vant";
 import "vant/lib/search/style/index";
 import DThemeProvider from "../DThemeProvider/index.vue";
 import DAliIcon from "../DcIcon/icon.vue";
-import { useAttrs } from "vue";
+import { shallowRef, useAttrs } from "vue";
+import { SearchExpose } from "vant/lib/search/types";
 
-const props = withDefaults(defineProps(), {});
+defineProps(searchProps)
 
-const attrs = useAttrs()
+const attrs = useAttrs();
 
 const modelValue = defineModel({
   type: String,
   default: "",
 });
+
+const SearchRef = shallowRef();
+
+defineExpose(
+  new Proxy({} as SearchExpose, {
+    get(_taget, key) {
+      return SearchRef.value?.[key as keyof typeof SearchRef.value];
+    },
+    has(_taget, key) {
+      return SearchRef.value?.[key as keyof typeof SearchRef.value];
+    },
+  }),
+);
 </script>
 <template>
   <DThemeProvider>
     <div class="d-search">
-      <Search v-model="modelValue" v-bind="attrs">
+      <Search v-model="modelValue" v-bind="attrs" ref="SearchRef">
         <template #left-icon>
           <slot name="left-icon">
             <span class="dc-flex dc-items-center dc-justify-center">
-              <DAliIcon icon-name="a-sousuoliebiaoicon2" width="16" height="16"></DAliIcon>
+              <DAliIcon
+                icon-name="a-sousuoliebiaoicon2"
+                width="16"
+                height="16"
+              ></DAliIcon>
             </span>
           </slot>
         </template>
         <template #right-icon>
           <slot name="right-icon">
-            <span class="dc-c-white dc-bg-primary dc-px-14px dc-py-7px dc-rounded-7px dc-font-size-12px">搜索</span>
+            <span
+              class="dc-c-white dc-bg-primary dc-px-14px dc-py-7px dc-rounded-7px dc-font-size-12px"
+              >搜索</span
+            >
           </slot>
         </template>
       </Search>
@@ -48,7 +69,7 @@ const modelValue = defineModel({
   :deep(.van-search__content) {
     border-radius: 7px;
   }
-  :deep(.van-field__left-icon){
+  :deep(.van-field__left-icon) {
     margin-right: 11px !important;
   }
 }

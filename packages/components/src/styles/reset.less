@@ -1,0 +1,54 @@
+@layer dc-components.reset {
+  .dc-component {
+    box-sizing: border-box;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    // 清除块级元素默认 margin
+    p,
+    h1, h2, h3, h4, h5, h6,
+    ul, ol, dl,
+    blockquote,
+    figure,
+    pre {
+      margin: 0;
+    }
+
+    // 清除列表默认样式
+    ul, ol {
+      padding: 0;
+      list-style: none;
+    }
+
+    // 图片自适应
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    // 表单元素继承字体
+    input, button, textarea, select {
+      font: inherit;
+      color: inherit;
+    }
+
+    // 链接去下划线
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    // table 边框合并
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+  }
+}

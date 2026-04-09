@@ -2,75 +2,114 @@
   "hash": "96933edc",
   "configHash": "9c300e74",
   "lockfileHash": "66cf74f7",
-  "browserHash": "6015354c",
+  "browserHash": "2fefca22",
   "optimized": {
     "vue": {
       "src": "../../../../../../node_modules/.pnpm/vue@3.5.31_typescript@5.5.4/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "cd35bfb6",
+      "fileHash": "ae61a073",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../../../node_modules/.pnpm/@vue+devtools-api@7.3.8/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "3955b75d",
+      "fileHash": "b54d567b",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../../../node_modules/.pnpm/@vueuse+core@11.0.1_vue@3.5.31_typescript@5.5.4_/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "18b7c32e",
+      "fileHash": "31acaa94",
       "needsInterop": false
     },
     "vant": {
       "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/es/index.mjs",
       "file": "vant.js",
-      "fileHash": "fee8331d",
+      "fileHash": "949f23c5",
       "needsInterop": false
     },
     "vite-plugin-vitepress-demo/theme": {
       "src": "../../../../../../node_modules/.pnpm/vite-plugin-vitepress-demo@2.2.1_typescript@5.5.4_vitepress@1.3.3_@algolia+client-search@4.24_ocjrp5h7nir5jevqrctfhinhmm/node_modules/vite-plugin-vitepress-demo/dist/theme/index.mjs",
       "file": "vite-plugin-vitepress-demo_theme.js",
-      "fileHash": "2eeb16bc",
+      "fileHash": "f0f1ebe1",
       "needsInterop": false
     },
     "ant-design-vue": {
       "src": "../../../../../../node_modules/.pnpm/ant-design-vue@4.2.3_vue@3.5.31_typescript@5.5.4_/node_modules/ant-design-vue/es/index.js",
       "file": "ant-design-vue.js",
-      "fileHash": "ca0cbb06",
+      "fileHash": "93ab3043",
       "needsInterop": false
     },
     "highlight.js/lib/core": {
       "src": "../../../../../../node_modules/.pnpm/highlight.js@11.10.0/node_modules/highlight.js/es/core.js",
       "file": "highlight__js_lib_core.js",
-      "fileHash": "9e07663a",
+      "fileHash": "5057d9df",
       "needsInterop": false
     },
     "highlight.js/lib/languages/typescript": {
       "src": "../../../../../../node_modules/.pnpm/highlight.js@11.10.0/node_modules/highlight.js/es/languages/typescript.js",
       "file": "highlight__js_lib_languages_typescript.js",
-      "fileHash": "33e4eb47",
+      "fileHash": "bd8d3251",
       "needsInterop": false
     },
     "pinia": {
       "src": "../../../../../../node_modules/.pnpm/pinia@3.0.4_typescript@6.0.2_vue@3.5.31_typescript@6.0.2_/node_modules/pinia/dist/pinia.mjs",
       "file": "pinia.js",
-      "fileHash": "67d66f50",
+      "fileHash": "73411347",
       "needsInterop": false
     },
     "vant/lib/search/style/index": {
       "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/search/style/index.js",
       "file": "vant_lib_search_style_index.js",
-      "fileHash": "d84f983d",
+      "fileHash": "334f14b0",
+      "needsInterop": true
+    },
+    "vant/": {
+      "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/es/index.mjs",
+      "file": "vant_.js",
+      "fileHash": "d5a03d8f",
+      "needsInterop": false
+    },
+    "vant/lib/": {
+      "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/index.js",
+      "file": "vant_lib_.js",
+      "fileHash": "a727dfcf",
+      "needsInterop": true
+    },
+    "vant/lib/divider/": {
+      "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/divider/index.js",
+      "file": "vant_lib_divider_.js",
+      "fileHash": "a8e46d15",
+      "needsInterop": true
+    },
+    "vant/lib/divider/style/index": {
+      "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/divider/style/index.js",
+      "file": "vant_lib_divider_style_index.js",
+      "fileHash": "3f61e181",
+      "needsInterop": true
+    },
+    "vant/lib/divider": {
+      "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/divider/index.js",
+      "file": "vant_lib_divider.js",
+      "fileHash": "7512d2bb",
       "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-BMX2OU4I": {
-      "file": "chunk-BMX2OU4I.js"
+    "chunk-3GE5SO2M": {
+      "file": "chunk-3GE5SO2M.js"
     },
-    "chunk-GX73TU4U": {
-      "file": "chunk-GX73TU4U.js"
+    "chunk-RPIU2F4Z": {
+      "file": "chunk-RPIU2F4Z.js"
+    },
+    "chunk-OC57GEXY": {
+      "file": "chunk-OC57GEXY.js"
+    },
+    "chunk-67WIHQVL": {
+      "file": "chunk-67WIHQVL.js"
+    },
+    "chunk-AB4CWU2G": {
+      "file": "chunk-AB4CWU2G.js"
     },
     "chunk-V4OQ3NZ2": {
       "file": "chunk-V4OQ3NZ2.js"
