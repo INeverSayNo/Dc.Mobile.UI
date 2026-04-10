@@ -1,0 +1,1 @@
+var e=new Map([[`WGS84`,{name:`WGS84坐标系`,id:0}],[`Amap`,{name:`高德地图`,id:1}],[`BaiduMap`,{name:`百度地图`,id:2}],[`TencentMap`,{name:`腾讯地图`,id:3}]]);exports.LsysTypeEnum=e;

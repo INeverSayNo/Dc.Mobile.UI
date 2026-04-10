@@ -6,8 +6,9 @@ import i from "./DCell/index2.js";
 import a from "./DNoData/index2.js";
 import o from "./DTabs/index2.js";
 import s from "./DTab/index2.js";
+import c from "./DMap/index2.js";
 //#region src/install.ts
-var c = [
+var l = [
 	e,
 	t,
 	n,
@@ -15,7 +16,8 @@ var c = [
 	i,
 	a,
 	s,
-	o
+	o,
+	c
 ];
 //#endregion
-export { c as default };
+export { l as default };

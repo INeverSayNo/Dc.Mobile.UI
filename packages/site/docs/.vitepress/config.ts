@@ -83,6 +83,10 @@ export default defineConfig({
               text: "标签 DTab",
               link: "/components/DTab",
             },
+            {
+              text: "地图 DMap",
+              link: "/components/DMap",
+            },
             
           ],
         },

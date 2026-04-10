@@ -5,14 +5,14 @@ import {
   sticky_exports,
   swipe_exports,
   tabs_exports
-} from "./chunk-C2S6LDT5.js";
+} from "./chunk-WXTB5RXS.js";
 import {
   base_exports,
   init_base
-} from "./chunk-3GE5SO2M.js";
+} from "./chunk-HXJUR37L.js";
 import {
   __toCommonJS
-} from "./chunk-V4OQ3NZ2.js";
+} from "./chunk-LK32TJAX.js";
 
 // ../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/tabs/style/index.js
 init_base();

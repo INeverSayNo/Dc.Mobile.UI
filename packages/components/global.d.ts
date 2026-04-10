@@ -8,6 +8,7 @@ declare module "vue" {
     DNoData: (typeof import("dc-mobile-ui"))["DNoData"];
     DTabs: (typeof import("dc-mobile-ui"))["DTabs"];
     DTab: (typeof import("dc-mobile-ui"))["DTab"];
+    DMap: (typeof import("dc-mobile-ui"))["DMap"];
   }
 
   interface ComponentCustomProperties {}

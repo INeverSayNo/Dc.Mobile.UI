@@ -37,7 +37,7 @@ import {
   withDirectives,
   withKeys
 } from "./chunk-GX73TU4U.js";
-import "./chunk-V4OQ3NZ2.js";
+import "./chunk-LK32TJAX.js";
 
 // ../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/es/utils/basic.mjs
 function noop() {

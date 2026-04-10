@@ -2,7 +2,7 @@ import {
   computed,
   defineAsyncComponent
 } from "./chunk-GX73TU4U.js";
-import "./chunk-V4OQ3NZ2.js";
+import "./chunk-LK32TJAX.js";
 
 // ../../node_modules/.pnpm/vite-plugin-vitepress-demo@2.2.1_typescript@5.5.4_vitepress@1.3.3_@algolia+client-search@4.24_ocjrp5h7nir5jevqrctfhinhmm/node_modules/vite-plugin-vitepress-demo/dist/theme/index.mjs
 import AntdTheme from "F:/GitPackage/Dc.Mobile.UI/node_modules/.pnpm/vite-plugin-vitepress-demo@2.2.1_typescript@5.5.4_vitepress@1.3.3_@algolia+client-search@4.24_ocjrp5h7nir5jevqrctfhinhmm/node_modules/vite-plugin-vitepress-demo/dist/theme/antdv/index.vue";

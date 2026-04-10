@@ -7,11 +7,12 @@ import a from "./DCell/index2.js";
 import o from "./DNoData/index2.js";
 import s from "./DTabs/index2.js";
 import c from "./DTab/index2.js";
-import l from "./install.js";
+import l from "./DMap/index2.js";
+import u from "./install.js";
 /* empty css      */
 /* empty css             */
 import "./components.js";
 //#region src/index.ts
-var u = e([...l]);
+var d = e([...u]);
 //#endregion
-export { i as DCard, a as DCell, n as DInput, o as DNoData, r as DSearch, c as DTab, s as DTabs, t as DcIcon, u as default };
+export { i as DCard, a as DCell, n as DInput, l as DMap, o as DNoData, r as DSearch, c as DTab, s as DTabs, t as DcIcon, d as default };

@@ -6,3 +6,4 @@ export * from './DCell';
 export * from './DNoData';
 export * from './DTabs';
 export * from './DTab';
+export * from './DMap';

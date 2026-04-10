@@ -1,0 +1,1 @@
+require(`../../../../../_virtual/_rolldown/runtime.js`);let e=require(`vue`);function t(){return class extends BMapGL.Control{vNode;constructor(e,t,n){super(),this.vNode=n,this.defaultAnchor=e,this.defaultOffset=t}initialize(t){let n=document.createElement(`div`);return(0,e.render)(this.vNode,n),t.getContainer().appendChild(n),n}}}exports.default=t;

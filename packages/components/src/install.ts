@@ -6,6 +6,7 @@ import DCell from "./DCell";
 import DNoData from "./DNoData";
 import DTabs from "./DTabs";
 import DTab from "./DTab";
+import DMap from "./DMap";
 
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
@@ -17,6 +18,7 @@ declare module "@vue/runtime-core" {
     DNoData: typeof DNoData;
     DTab: typeof DTab;
     DTabs: typeof DTabs;
+    DMap: typeof DMap;
   }
 }
-export default [DcAliIcon, DInput, DSearch, DCard, DCell, DNoData, DTab, DTabs];
+export default [DcAliIcon, DInput, DSearch, DCard, DCell, DNoData, DTab, DTabs, DMap];

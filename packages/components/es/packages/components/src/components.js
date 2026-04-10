@@ -6,3 +6,4 @@ import "./DCell/index2.js";
 import "./DNoData/index2.js";
 import "./DTabs/index2.js";
 import "./DTab/index2.js";
+import "./DMap/index2.js";

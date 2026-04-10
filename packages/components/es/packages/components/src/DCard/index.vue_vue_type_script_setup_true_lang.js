@@ -4,7 +4,7 @@ import n from "../DThemeProvider/index.js";
 /* empty css                                                                                                          */
 import { createBlock as r, createCommentVNode as i, createElementBlock as a, createElementVNode as o, createVNode as s, defineComponent as c, normalizeClass as l, normalizeStyle as u, openBlock as d, ref as f, renderSlot as p, toDisplayString as m, unref as h, useSlots as g, withCtx as _ } from "vue";
 //#region src/DCard/index.vue?vue&type=script&setup=true&lang.ts
-var v = { key: 1 }, y = /* @__PURE__ */ c({
+var v = { key: 2 }, y = /* @__PURE__ */ c({
 	name: "DCard",
 	__name: "index",
 	props: {
@@ -45,12 +45,13 @@ var v = { key: 1 }, y = /* @__PURE__ */ c({
 					style: { margin: "8px 0" }
 				}, null, 8, ["dashed"])) : i("", !0),
 				p(f.$slots, "default"),
-				s(h(t), {
+				c.showFooter ? (d(), r(h(t), {
+					key: 1,
 					dashed: c.dividerDashed,
 					style: { margin: "8px 0" }
-				}, null, 8, ["dashed"]),
+				}, null, 8, ["dashed"])) : i("", !0),
 				C.value ? (d(), a("div", v, [p(f.$slots, "more")])) : i("", !0),
-				c.showFooter ? p(f.$slots, "footer", { key: 2 }, () => [o("div", {
+				c.showFooter ? p(f.$slots, "footer", { key: 3 }, () => [o("div", {
 					class: l(["dc-font-size-12px dc-flex dc-items-center", {
 						"dc-justify-between": c.footerLayout === "between",
 						"dc-justify-center": c.footerLayout === "center",

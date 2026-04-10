@@ -1,4 +1,4 @@
-import "./chunk-V4OQ3NZ2.js";
+import "./chunk-LK32TJAX.js";
 
 // ../../node_modules/.pnpm/highlight.js@11.10.0/node_modules/highlight.js/es/languages/typescript.js
 var IDENT_RE = "[A-Za-z$_][0-9A-Za-z$_]*";

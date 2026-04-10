@@ -16,5 +16,7 @@ export interface IConfig {
         file_url: string;
         getfile_url: string;
         tokenName: string;
+        useCrypto?: boolean;
+        cryptoType?: number;
     };
 }

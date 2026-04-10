@@ -9,6 +9,7 @@ var y = { class: "d-search" }, b = { class: "dc-flex dc-items-center dc-justify-
 	key: 0,
 	class: "dc-c-white dc-bg-primary dc-px-14px dc-py-7px dc-rounded-7px dc-font-size-12px"
 }, S = /* @__PURE__ */ l({
+	name: "DSearch",
 	__name: "index",
 	props: /* @__PURE__ */ u({
 		...t,

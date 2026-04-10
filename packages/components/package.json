@@ -1,6 +1,6 @@
 {
   "name": "dc-mobile-ui",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "test",
   "main": "./lib/packages/components/src/index.js",
   "module": "./es/packages/components/src/index.js",
@@ -44,5 +44,8 @@
     "shelljs": "^0.8.5",
     "unocss": "^66.6.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dc-tools": "^2.0.11",
+    "@turf/turf": "^7.2.0"
+  }
 }

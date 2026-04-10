@@ -2,7 +2,7 @@ import {
   createHooks,
   debounce
 } from "./chunk-67WIHQVL.js";
-import "./chunk-V4OQ3NZ2.js";
+import "./chunk-LK32TJAX.js";
 
 // ../../node_modules/.pnpm/@vue+devtools-shared@7.3.8/node_modules/@vue/devtools-shared/dist/index.js
 var __create = Object.create;

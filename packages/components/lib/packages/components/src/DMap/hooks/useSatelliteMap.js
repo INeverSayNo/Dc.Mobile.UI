@@ -1,0 +1,1 @@
+require(`../../../../../_virtual/_rolldown/runtime.js`);let e=require(`vue`);function t(t,n,r){(0,e.watch)([()=>t.showTerrain,()=>r.value],([e,t])=>{t&&(e?t.setMapType(BMAP_SATELLITE_MAP):t.setMapType(BMAP_NORMAL_MAP))},{immediate:!0})}exports.default=t;

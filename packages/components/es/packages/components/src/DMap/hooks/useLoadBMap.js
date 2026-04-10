@@ -1,0 +1,23 @@
+//#region src/DMap/hooks/useLoadBMap.ts
+var e = class {
+	static isLoad = !1;
+	static eventList = /* @__PURE__ */ new Set();
+	static async insertBMapEle() {
+		if (window.resourcebaiduMapInit = () => {
+			this.isLoad = !0, this.executeCallbacks();
+		}, document.getElementById("DcResourceBmapScript")) {
+			window.resourcebaiduMapInit();
+			return;
+		}
+		let e = document.createElement("script");
+		e.id = "DcResourceBmapScript", e.type = "text/javascript", e.src = "https://api.map.baidu.com/api?type=webgl&v=1.0&ak=QfsfdSaTbBV1RneMR2h0awHUoAQv0vbI&callback=resourcebaiduMapInit&s=1", document.head.appendChild(e);
+	}
+	static whenLoad(e = () => {}) {
+		this.isLoad ? e() : this.eventList.add(e);
+	}
+	static executeCallbacks() {
+		this.eventList.forEach((e) => e()), this.eventList.clear();
+	}
+};
+//#endregion
+export { e as BmapController };

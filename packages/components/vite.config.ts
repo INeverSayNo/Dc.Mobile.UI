@@ -25,7 +25,7 @@ export default defineConfig(() => {
     build: {
       rollupOptions: {
         // 将vue模块排除在打包文件之外，使用用这个组件库的项目的vue模块
-        external: ["vue","pinia"],
+        external: ["vue", "pinia"],
 
         // 输出配置
         output: [
@@ -67,9 +67,11 @@ export default defineConfig(() => {
       vue(),
       UnoCSS({
         configFile: false, // 禁止自动查找 config 文件
-        presets: [presetWind3({
-          prefix: "dc-",
-        })],
+        presets: [
+          presetWind3({
+            prefix: "dc-",
+          }),
+        ],
         content: {
           filesystem: ["./src/**/*.{vue,ts}"],
         },
@@ -87,6 +89,17 @@ export default defineConfig(() => {
         outputToCssLayers: {
           cssLayerName: (layer: string) => `dc-components.${layer}`,
         },
+        variants: [
+          (matcher) => {
+            if (matcher.endsWith("!")) return matcher;
+            if (matcher.startsWith("dc-")) {
+              return {
+                matcher: matcher + "!",
+              };
+            }
+            return matcher;
+          },
+        ],
       }),
       dts({
         // 输出目录

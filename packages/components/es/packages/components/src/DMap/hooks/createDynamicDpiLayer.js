@@ -1,0 +1,42 @@
+//#region src/DMap/hooks/createDynamicDpiLayer.ts
+var e = (e) => e - Math.floor(e) > .5 ? 120 : 180, t = "https://gateway.dczhiyun.com/geo/geoserver/osm/wms", n = (n, r, i) => {
+	let { layerName: a, maxZoom: o, minZoom: s } = n, c = null, l = (e) => {
+		let n = {
+			layers: `osm:${a}`,
+			service: "WMS",
+			request: "GetMap",
+			format: "image/png8",
+			transparent: !0,
+			version: "1.1.0",
+			srs: "EPSG:3857",
+			width: 512,
+			height: 512,
+			tiled: !0,
+			FORMAT_OPTIONS: `dpi:${e}`
+		};
+		if (i) for (let e in i) n[e] = i[e];
+		let r = new URLSearchParams();
+		for (let e in n) r.append(e, n[e]);
+		return `${t}?${r.toString()}&BBOX=[b]`;
+	}, u = () => {
+		let t = r.value;
+		if (!t) return;
+		let n = e(t.getZoom()), i = new BMapGL.XYZLayer({
+			tileUrlTemplate: l(n),
+			minZoom: s,
+			maxZoom: o
+		});
+		t.addTileLayer(i), i.setTop(9999);
+		let a = c;
+		a && setTimeout(() => t.removeTileLayer(a), 300), c = i;
+	};
+	return u(), {
+		rebuild: u,
+		getLayer: () => c,
+		remove: () => {
+			c &&= (r.value?.removeTileLayer(c), null);
+		}
+	};
+};
+//#endregion
+export { n as createReactiveDpiLayer };

@@ -51,7 +51,7 @@ const clickFooter = () => {
         style="margin: 8px 0"
       ></Divider>
       <slot></slot>
-      <Divider :dashed="dividerDashed" style="margin: 8px 0"></Divider>
+      <Divider v-if="showFooter" :dashed="dividerDashed" style="margin: 8px 0"></Divider>
       <div v-if="showMore">
         <slot name="more"></slot>
       </div>

@@ -1,23 +1,23 @@
 import {
+  badge_exports,
+  init_badge
+} from "./chunk-UXYYIROQ.js";
+import {
   init_sticky,
   init_swipe,
   init_tabs,
   sticky_exports,
   swipe_exports,
   tabs_exports
-} from "./chunk-C2S6LDT5.js";
-import {
-  badge_exports,
-  init_badge
-} from "./chunk-HIZLU6KL.js";
+} from "./chunk-WXTB5RXS.js";
 import {
   base_exports,
   init_base
-} from "./chunk-3GE5SO2M.js";
+} from "./chunk-HXJUR37L.js";
 import {
   __esm,
   __toCommonJS
-} from "./chunk-V4OQ3NZ2.js";
+} from "./chunk-LK32TJAX.js";
 
 // vite:dep-pre-bundle:external-conversion:F:/GitPackage/Dc.Mobile.UI/node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/swipe-item/index.css
 var swipe_item_exports = {};

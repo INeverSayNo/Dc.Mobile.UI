@@ -6,6 +6,11 @@ import DAliIcon from "../DcIcon/icon.vue";
 import { shallowRef, useAttrs } from "vue";
 import { SearchExpose } from "vant/lib/search/types";
 
+
+defineOptions({
+  name: "DSearch",
+});
+
 defineProps({
   ...searchProps,
   showSearch: {
