@@ -25,7 +25,7 @@ export default defineConfig(() => {
     build: {
       rollupOptions: {
         // 将vue模块排除在打包文件之外，使用用这个组件库的项目的vue模块
-        external: ["vue"],
+        external: ["vue","pinia"],
 
         // 输出配置
         output: [

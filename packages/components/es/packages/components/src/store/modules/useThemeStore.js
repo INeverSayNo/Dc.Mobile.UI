@@ -1,4 +1,4 @@
-import { defineStore as e } from "../../../../../node_modules/.pnpm/pinia@3.0.4_typescript@6.0.2_vue@3.5.31_typescript@6.0.2_/node_modules/pinia/dist/pinia.js";
+import { defineStore as e } from "pinia";
 //#region src/store/modules/useThemeStore.ts
 var t = e("dcMobileUIThemeStore", {
 	state: () => ({
