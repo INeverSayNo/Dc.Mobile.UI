@@ -7,17 +7,20 @@ import 'vant/lib/index.css'
 import Antd from "ant-design-vue"
 import Login from './components/login.vue';
 import TypesDialog from './components/typesDialog.vue';
+import DocLayout from './components/DocLayout.vue';
 import DcMobileUI from "dc-mobile-ui";
+// import 'amfe-flexible'
 
 export default {
     ...DefaultTheme,
+    Layout: DocLayout,
     enhanceApp({ app }) {
         app.component("Demo", AntdTheme).use(Antd);
         app.component("Login", Login);
         app.component("TypesDialog", TypesDialog);
         app.use(DcMobileUI, {
             theme: {
-                primary: "#007bff",
+                primary: "#145ca8",
                 success: "#28a745",
                 danger: "#dc3545",
                 error: "#dc3545",
@@ -31,4 +34,4 @@ export default {
             },
         });
     }
-}
+} satisfies Theme;

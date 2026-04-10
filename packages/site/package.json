@@ -13,7 +13,7 @@
     "dc-tools": "^2.0.11",
     "dc-mobile-ui": "workspace:*",
     "highlight.js": "^11.10.0",
-    "vue": "^3.5.31"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@ant-design/icons-vue": "^7.0.1",

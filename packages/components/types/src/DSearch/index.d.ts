@@ -4,6 +4,10 @@ import { FieldTextAlign, FieldEnterKeyHint, FieldClearTrigger, FieldFormatTrigge
 import { OnCleanup } from '@vue/reactivity';
 export declare const DSearch: SFCWithInstall<{
     new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly< ExtractPropTypes<{
+        showSearch: {
+            type: BooleanConstructor;
+            default: boolean;
+        };
         id: StringConstructor;
         name: StringConstructor;
         leftIcon: StringConstructor & {
@@ -87,6 +91,7 @@ export declare const DSearch: SFCWithInstall<{
         spellcheck: boolean;
         disabled: boolean;
         readonly: boolean;
+        showSearch: boolean;
         shape: SearchShape;
         showAction: boolean;
     }, true, {}, {}, GlobalComponents, GlobalDirectives, string, {
@@ -378,6 +383,10 @@ export declare const DSearch: SFCWithInstall<{
         M: {};
         Defaults: {};
     }, Readonly< ExtractPropTypes<{
+        showSearch: {
+            type: BooleanConstructor;
+            default: boolean;
+        };
         id: StringConstructor;
         name: StringConstructor;
         leftIcon: StringConstructor & {
@@ -459,6 +468,7 @@ export declare const DSearch: SFCWithInstall<{
         spellcheck: boolean;
         disabled: boolean;
         readonly: boolean;
+        showSearch: boolean;
         shape: SearchShape;
         showAction: boolean;
     }>;
@@ -466,6 +476,10 @@ export declare const DSearch: SFCWithInstall<{
     __isTeleport?: never;
     __isSuspense?: never;
 } & ComponentOptionsBase<Readonly< ExtractPropTypes<{
+    showSearch: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     id: StringConstructor;
     name: StringConstructor;
     leftIcon: StringConstructor & {
@@ -549,6 +563,7 @@ export declare const DSearch: SFCWithInstall<{
     spellcheck: boolean;
     disabled: boolean;
     readonly: boolean;
+    showSearch: boolean;
     shape: SearchShape;
     showAction: boolean;
 }, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {

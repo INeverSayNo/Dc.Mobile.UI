@@ -8,6 +8,8 @@ export const useHostStore = defineStore("dcMobileUIHostStore", {
     login_url: "https://gateway.daochen.com",
     getfile_url: "https://gateway.daochen.com",
     tokenName: "JsToken",
+    useCrypto: true,
+    cryptoType: 1
   }),
   actions: {
     initState(payload: HostState) {
@@ -16,6 +18,8 @@ export const useHostStore = defineStore("dcMobileUIHostStore", {
       this.login_url = payload.login_url;
       this.getfile_url = payload.getfile_url;
       this.tokenName = payload.tokenName;
+      this.useCrypto = payload.useCrypto;
+      this.cryptoType = payload.cryptoType;
     },
   },
 });

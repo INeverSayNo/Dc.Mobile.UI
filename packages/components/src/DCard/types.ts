@@ -5,6 +5,7 @@ export interface DCardProps {
   shadow?: boolean;
   footerTitle?: string
   customClass?: string | string[]
+  showFooter?: boolean
 }
 
 export interface DCardEmits {

@@ -22,7 +22,11 @@ var v = { key: 1 }, y = /* @__PURE__ */ c({
 			default: !1
 		},
 		footerTitle: { default: "查看更多信息" },
-		customClass: { default: "" }
+		customClass: { default: "" },
+		showFooter: {
+			type: Boolean,
+			default: !0
+		}
 	},
 	emits: ["clickFooter", "clickHeader"],
 	setup(c, { emit: y }) {
@@ -46,14 +50,14 @@ var v = { key: 1 }, y = /* @__PURE__ */ c({
 					style: { margin: "8px 0" }
 				}, null, 8, ["dashed"]),
 				C.value ? (d(), a("div", v, [p(f.$slots, "more")])) : i("", !0),
-				p(f.$slots, "footer", {}, () => [o("div", {
+				c.showFooter ? p(f.$slots, "footer", { key: 2 }, () => [o("div", {
 					class: l(["dc-font-size-12px dc-flex dc-items-center", {
 						"dc-justify-between": c.footerLayout === "between",
 						"dc-justify-center": c.footerLayout === "center",
 						"dc-justify-end": c.footerLayout === "right"
 					}]),
 					onClick: w
-				}, [o("span", null, m(c.footerTitle), 1), s(h(e), { name: "arrow-down" })], 2)])
+				}, [o("span", null, m(c.footerTitle), 1), s(h(e), { name: "arrow-down" })], 2)]) : i("", !0)
 			], 6)]),
 			_: 3
 		}));

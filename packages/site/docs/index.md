@@ -16,12 +16,12 @@ features:
 
 ## 快速上手
 
-本节将介绍如何在项目中使用 Dc.Mobile.UI。
+本节将介绍如何在项目中使用 Dc.Mobile.UI. 
 
 
 ### 安装
 
-推荐使用全局安装，因为新版组件库依旧依赖初始化传入的配置项。以下是一个简单的示例，该配置将注入至全局的<code>Pinia</code>，并将初始化<code>Id</code>为<code>hostStore</code>的状态库。所以请勿在项目内配置相同名称的<code>Pinia</code>状态库
+推荐使用全局安装, 因为新版组件库依旧依赖初始化传入的配置项. 以下是一个简单的示例, 该配置将注入至全局的<code>Pinia</code>, 并将初始化<code>Id</code>为<code>hostStore</code>的状态库. 所以请勿在项目内配置相同名称的<code>Pinia</code>状态库
 
 #### 完整引入
 
@@ -36,7 +36,7 @@ import App from './App.vue';
 const app = craeteApp();
 app.use(DcUI, {
   theme: {
-    primary:"#1989fa",
+    primary:"#145ca8",
     success:"#07c160",
     danger:"#ed6a0c",
     error:"#ee0a24"
@@ -53,11 +53,11 @@ app.use(DcUI, {
 
 ### config解读
 
-  <code>theme</code>默认使用vant原始字段，你可以手动传入，这将覆盖原始配置。
+  <code>theme</code>默认使用vant原始字段, 你可以手动传入, 这将覆盖原始配置. 
 
 ### postToRem
 
-  本组件库默认使用375设计稿作为基准值，在项目中，如使用其他基准值，请配置排除列表。以下为<code>vite.config.ts</code>配置示例
+  本组件库默认使用375设计稿作为基准值, 在项目中, 如使用其他基准值, 请配置排除列表. 以下为<code>vite.config.ts</code>配置示例
 
 ```Typescript
 import { defineConfig, loadEnv } from "vite"
@@ -69,7 +69,7 @@ function postcssRemToPx(options: { include: RegExp; rootValue?: number }) {
     postcssPlugin: "postcss-rem-to-px",
     Once(css: any) {
       const filePath = css.source?.input?.file || ""
-      if (!options.include.test(filePath)) return  // 不匹配直接返回，无共享状态
+      if (!options.include.test(filePath)) return  // 不匹配直接返回, 无共享状态
       css.walkDecls((decl: any) => {
         if (!decl.value.includes("rem")) return
         decl.value = decl.value.replace(
@@ -144,7 +144,7 @@ export default defineConfig(async ({ mode }) => {
            postcssRemToPx({ include: /dc-mobile-ui/, rootValue: 16 }),
            postcssPxToRemSafe({
             rootValue({ file }) {
-              // Vant 文件用 37.5，业务代码用 75
+              // Vant 文件用 37.5, 业务代码用 75
               return file?.includes("node_modules/vant") ? 37.5 : 75
             },
             propList: ["*"],
@@ -160,7 +160,7 @@ export default defineConfig(async ({ mode }) => {
 
 ### 注意⚠️
 
-你需要在项目中显式导入<code>import 'amfe-flexible'</code>;以免样式错乱
+你需要在项目中显式导入<code>import 'amfe-flexible'</code>;以免样式错乱. 基于<code>Vant</code>的组件均采用透明代理机制, 你可以使用 <code>Ref</code> 直接获取底层 <code>Vant</code> 组件的 <code>Instance</code> 来消费
 
 <style>
 :root {

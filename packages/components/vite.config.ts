@@ -52,6 +52,7 @@ export default defineConfig(() => {
             dir: "lib",
             // 指定保留模块结构的根目录
             preserveModulesRoot: "src",
+            exports: "named",
           },
         ],
       },

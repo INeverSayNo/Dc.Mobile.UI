@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["vite:dep-pre-bundle:external-conversion:F:/GitPackage/Dc.Mobile.UI/node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/divider/index.css", "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/divider/style/index.js"],
-  "sourcesContent": ["import \"vite-dep-pre-bundle-external:F:/GitPackage/Dc.Mobile.UI/node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/divider/index.css\";", "require(\"../../style/base.css\");\nrequire(\"../index.css\");\n"],
-  "mappings": ";;;;;;;;;;AAAA;AAAA,OAAO;AAAP;AAAA;AAAA;AAAA;;;ACAA;AACA;",
-  "names": []
-}

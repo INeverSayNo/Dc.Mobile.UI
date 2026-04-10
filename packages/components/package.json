@@ -1,6 +1,6 @@
 {
   "name": "dc-mobile-ui",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "test",
   "main": "./lib/packages/components/src/index.js",
   "module": "./es/packages/components/src/index.js",
@@ -34,7 +34,7 @@
   "license": "ISC",
   "peerDependencies": {
     "vant": "^4.9.22",
-    "vue": "^3.5.31"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@unocss/preset-uno": "^66.6.7",

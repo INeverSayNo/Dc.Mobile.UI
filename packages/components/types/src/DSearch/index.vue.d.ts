@@ -293,6 +293,10 @@ declare function __VLS_template(): {
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: DefineComponent<ExtractPropTypes<{
+    showSearch: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     id: StringConstructor;
     name: StringConstructor;
     leftIcon: StringConstructor & {
@@ -363,6 +367,10 @@ declare const __VLS_component: DefineComponent<ExtractPropTypes<{
 }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
     "update:modelValue": (value: string) => any;
 }, string, PublicProps, Readonly< ExtractPropTypes<{
+    showSearch: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     id: StringConstructor;
     name: StringConstructor;
     leftIcon: StringConstructor & {
@@ -441,6 +449,7 @@ declare const __VLS_component: DefineComponent<ExtractPropTypes<{
     spellcheck: boolean;
     disabled: boolean;
     readonly: boolean;
+    showSearch: boolean;
     shape: SearchShape;
     showAction: boolean;
 }, {}, {}, {}, string, ComponentProvideOptions, true, {

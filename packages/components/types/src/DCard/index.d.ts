@@ -15,6 +15,7 @@ export declare const DCard: SFCWithInstall<{
         shadow: boolean;
         footerTitle: string;
         customClass: string | string[];
+        showFooter: boolean;
     }, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, {
         P: {};
         B: {};
@@ -32,6 +33,7 @@ export declare const DCard: SFCWithInstall<{
         shadow: boolean;
         footerTitle: string;
         customClass: string | string[];
+        showFooter: boolean;
     }>;
     __isFragment?: never;
     __isTeleport?: never;
@@ -49,6 +51,7 @@ export declare const DCard: SFCWithInstall<{
     shadow: boolean;
     footerTitle: string;
     customClass: string | string[];
+    showFooter: boolean;
 }, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
     $slots: Readonly<{
         header?: () => any;

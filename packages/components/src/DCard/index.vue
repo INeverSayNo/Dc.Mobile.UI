@@ -14,7 +14,8 @@ const props = withDefaults(defineProps<DCardProps>(), {
   isShowCollapse: false,
   shadow: false,
   customClass: "",
-  footerTitle: "查看更多信息"
+  footerTitle: "查看更多信息",
+  showFooter: true
 });
 
 const emits = defineEmits<DCardEmits>();
@@ -54,7 +55,7 @@ const clickFooter = () => {
       <div v-if="showMore">
         <slot name="more"></slot>
       </div>
-      <slot name="footer">
+      <slot v-if="showFooter" name="footer">
         <div
           class="dc-font-size-12px dc-flex dc-items-center"
           :class="{

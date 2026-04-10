@@ -35,10 +35,22 @@
 .code-box-demo{
     background: linear-gradient(45deg, #c4dbff, transparent) !important;
     padding: 40px 200px !important;
+    display: none !important;
+}
+
+.highlight-wrapper {
+  display: block !important;
 }
 
 .vp-doc .vp-raw p,
 .vp-doc .vp-raw summary {
   margin: 0;
   line-height: inherit;
+}
+
+/* 组件页面给右侧手机留出空间 */
+@media (min-width: 960px) {
+  .vp-doc.has-sidebar .content-container {
+    max-width: 680px !important;
+  }
 }

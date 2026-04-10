@@ -3,9 +3,15 @@ import { defineConfig } from "vitepress";
 import { vitepressDemo } from "vite-plugin-vitepress-demo";
 import UnoCSS from "unocss/vite";
 import { presetWind3 } from "unocss";
+import { resolve } from "path";
 
 export default defineConfig({
   vite: {
+    resolve: {
+      alias: {
+        "dc-mobile-ui": resolve(__dirname, "../../../components/src/index.ts"),
+      },
+    },
     plugins: [
       vitepressDemo({
         glob: ["**/demo/**/*.vue"], // 指定需要处理的文件
@@ -71,6 +77,16 @@ export default defineConfig({
           ],
         },
         {
+          text: "导航组件",
+          items: [
+            {
+              text: "标签 DTab",
+              link: "/components/DTab",
+            },
+            
+          ],
+        },
+        {
           text: "静态组件",
           items: [
             {
@@ -81,8 +97,13 @@ export default defineConfig({
               text: "单元格 DCell",
               link: "/components/DCell",
             },
+            {
+              text: "空状态 DNoData",
+              link: "/components/DNoData",
+            },
           ],
         },
+
       ],
     },
   },

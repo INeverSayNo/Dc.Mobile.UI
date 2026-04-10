@@ -4,6 +4,8 @@ export interface HostState {
     file_url: string;
     getfile_url: string;
     tokenName: string;
+    useCrypto?: boolean;
+    cryptoType?: number;
 }
 export interface ThemeState {
     primary: string;

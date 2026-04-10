@@ -30,6 +30,7 @@ declare const __VLS_component: DefineComponent<DCardProps, {}, {}, {}, {}, Compo
     shadow: boolean;
     footerTitle: string;
     customClass: string | string[];
+    showFooter: boolean;
 }, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;

@@ -3,3 +3,6 @@ import "./DInput/index2.js";
 import "./DSearch/index2.js";
 import "./DCard/index2.js";
 import "./DCell/index2.js";
+import "./DNoData/index2.js";
+import "./DTabs/index2.js";
+import "./DTab/index2.js";

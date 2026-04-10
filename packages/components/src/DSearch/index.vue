@@ -6,7 +6,13 @@ import DAliIcon from "../DcIcon/icon.vue";
 import { shallowRef, useAttrs } from "vue";
 import { SearchExpose } from "vant/lib/search/types";
 
-defineProps(searchProps)
+defineProps({
+  ...searchProps,
+  showSearch: {
+    type: Boolean,
+    default: true,
+  },
+})
 
 const attrs = useAttrs();
 
@@ -46,6 +52,7 @@ defineExpose(
         <template #right-icon>
           <slot name="right-icon">
             <span
+              v-if="showSearch"
               class="dc-c-white dc-bg-primary dc-px-14px dc-py-7px dc-rounded-7px dc-font-size-12px"
               >搜索</span
             >

@@ -3,13 +3,18 @@ import { default as DInput } from './DInput';
 import { default as DSearch } from './DSearch';
 import { default as DCard } from './DCard';
 import { default as DCell } from './DCell';
+import { default as DNoData } from './DNoData';
+import { default as DTabs } from './DTabs';
+import { default as DTab } from './DTab';
 import { SFCWithInstall } from './utils/typescript';
 import { DefineComponent, ComponentOptionsMixin, PublicProps, ComponentProvideOptions, CreateComponentPublicInstanceWithMixins, ExtractPropTypes, PropType, HTMLAttributes, GlobalComponents, GlobalDirectives, ComponentInternalInstance, VNodeProps, AllowedComponentProps, ComponentCustomProps, Attrs, Slot, ComponentPublicInstance, ComponentOptionsBase, DebuggerEvent, nextTick, WatchOptions, WatchStopHandle, ShallowUnwrapRef, ComponentCustomProperties, CSSProperties } from 'vue';
 import { DcIconProps } from './DcIcon/type';
-import { FieldTextAlign, FieldEnterKeyHint, FieldClearTrigger, FieldFormatTrigger, SearchShape, CellSize, CellArrowDirection } from 'vant';
+import { FieldTextAlign, FieldEnterKeyHint, FieldClearTrigger, FieldFormatTrigger, SearchShape, CellSize, CellArrowDirection, TabsType } from 'vant';
 import { OnCleanup } from '@vue/reactivity';
 import { DCardProps } from './DCard/types';
 import { RouteLocationRaw } from 'vue-router';
+import { DNoDataProps, ImgType } from './DNoData/type';
+import { Interceptor, Numeric } from 'vant/lib/utils';
 declare module "@vue/runtime-core" {
     interface GlobalComponents {
         DcAliIcon: typeof DcAliIcon;
@@ -17,6 +22,9 @@ declare module "@vue/runtime-core" {
         DSearch: typeof DSearch;
         DCard: typeof DCard;
         DCell: typeof DCell;
+        DNoData: typeof DNoData;
+        DTab: typeof DTab;
+        DTabs: typeof DTabs;
     }
 }
 declare const _default: (( SFCWithInstall<DefineComponent<DcIconProps, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly< DcIconProps> & Readonly<{}>, {
@@ -34,6 +42,10 @@ declare const _default: (( SFCWithInstall<DefineComponent<DcIconProps, {}, {}, {
     "onUpdate:modelValue"?: ((value: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {}, any>> & Record<string, any>) | ( SFCWithInstall<{
     new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly< ExtractPropTypes<{
+        showSearch: {
+            type: BooleanConstructor;
+            default: boolean;
+        };
         id: StringConstructor;
         name: StringConstructor;
         leftIcon: StringConstructor & {
@@ -117,6 +129,7 @@ declare const _default: (( SFCWithInstall<DefineComponent<DcIconProps, {}, {}, {
         spellcheck: boolean;
         disabled: boolean;
         readonly: boolean;
+        showSearch: boolean;
         shape: SearchShape;
         showAction: boolean;
     }, true, {}, {}, GlobalComponents, GlobalDirectives, string, {
@@ -408,6 +421,10 @@ declare const _default: (( SFCWithInstall<DefineComponent<DcIconProps, {}, {}, {
         M: {};
         Defaults: {};
     }, Readonly< ExtractPropTypes<{
+        showSearch: {
+            type: BooleanConstructor;
+            default: boolean;
+        };
         id: StringConstructor;
         name: StringConstructor;
         leftIcon: StringConstructor & {
@@ -489,6 +506,7 @@ declare const _default: (( SFCWithInstall<DefineComponent<DcIconProps, {}, {}, {
         spellcheck: boolean;
         disabled: boolean;
         readonly: boolean;
+        showSearch: boolean;
         shape: SearchShape;
         showAction: boolean;
     }>;
@@ -496,6 +514,10 @@ declare const _default: (( SFCWithInstall<DefineComponent<DcIconProps, {}, {}, {
     __isTeleport?: never;
     __isSuspense?: never;
 } & ComponentOptionsBase<Readonly< ExtractPropTypes<{
+    showSearch: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
     id: StringConstructor;
     name: StringConstructor;
     leftIcon: StringConstructor & {
@@ -579,6 +601,7 @@ declare const _default: (( SFCWithInstall<DefineComponent<DcIconProps, {}, {}, {
     spellcheck: boolean;
     disabled: boolean;
     readonly: boolean;
+    showSearch: boolean;
     shape: SearchShape;
     showAction: boolean;
 }, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
@@ -600,6 +623,7 @@ declare const _default: (( SFCWithInstall<DefineComponent<DcIconProps, {}, {}, {
         shadow: boolean;
         footerTitle: string;
         customClass: string | string[];
+        showFooter: boolean;
     }, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, any, ComponentProvideOptions, {
         P: {};
         B: {};
@@ -617,6 +641,7 @@ declare const _default: (( SFCWithInstall<DefineComponent<DcIconProps, {}, {}, {
         shadow: boolean;
         footerTitle: string;
         customClass: string | string[];
+        showFooter: boolean;
     }>;
     __isFragment?: never;
     __isTeleport?: never;
@@ -634,6 +659,7 @@ declare const _default: (( SFCWithInstall<DefineComponent<DcIconProps, {}, {}, {
     shadow: boolean;
     footerTitle: string;
     customClass: string | string[];
+    showFooter: boolean;
 }, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
     $slots: Readonly<{
         header?: () => any;
@@ -824,6 +850,836 @@ declare const _default: (( SFCWithInstall<DefineComponent<DcIconProps, {}, {}, {
         icon?(_: {}): any;
         'right-icon'?(_: {}): any;
         extra?(_: {}): any;
+    };
+})> & Record<string, any>) | ( SFCWithInstall<{
+    new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly< DNoDataProps> & Readonly<{
+        onClick?: (() => any) | undefined;
+        onClickTips?: (() => any) | undefined;
+        onClickImages?: (() => any) | undefined;
+    }>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
+        click: () => any;
+        clickTips: () => any;
+        clickImages: () => any;
+    }, PublicProps, {
+        type: ImgType;
+        layout: "vertical" | "horizontal";
+        errImg: string;
+        tips: string;
+        className: string | string[];
+    }, false, {}, {}, GlobalComponents, GlobalDirectives, string, {}, HTMLDivElement, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+    }, Readonly< DNoDataProps> & Readonly<{
+        onClick?: (() => any) | undefined;
+        onClickTips?: (() => any) | undefined;
+        onClickImages?: (() => any) | undefined;
+    }>, {}, {}, {}, {}, {
+        type: ImgType;
+        layout: "vertical" | "horizontal";
+        errImg: string;
+        tips: string;
+        className: string | string[];
+    }>;
+    __isFragment?: never;
+    __isTeleport?: never;
+    __isSuspense?: never;
+} & ComponentOptionsBase<Readonly< DNoDataProps> & Readonly<{
+    onClick?: (() => any) | undefined;
+    onClickTips?: (() => any) | undefined;
+    onClickImages?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {} & {
+    click: () => any;
+    clickTips: () => any;
+    clickImages: () => any;
+}, string, {
+    type: ImgType;
+    layout: "vertical" | "horizontal";
+    errImg: string;
+    tips: string;
+    className: string | string[];
+}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    $slots: {
+        default?(_: {}): any;
+    };
+})> & Record<string, any>) | ( SFCWithInstall<{
+    new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly< ExtractPropTypes<{
+        transparent: {
+            type: BooleanConstructor;
+            default: boolean;
+        };
+        customClass: {
+            type: PropType<string | string[]>;
+            default: string;
+        };
+        type: {
+            type: PropType<TabsType>;
+            default: TabsType;
+        };
+        color: StringConstructor;
+        border: BooleanConstructor;
+        sticky: BooleanConstructor;
+        shrink: BooleanConstructor;
+        active: {
+            type: (NumberConstructor | StringConstructor)[];
+            default: number;
+        };
+        duration: {
+            type: (NumberConstructor | StringConstructor)[];
+            default: number;
+        };
+        animated: BooleanConstructor;
+        ellipsis: {
+            type: BooleanConstructor;
+            default: true;
+        };
+        swipeable: BooleanConstructor;
+        scrollspy: BooleanConstructor;
+        offsetTop: {
+            type: (NumberConstructor | StringConstructor)[];
+            default: number;
+        };
+        background: StringConstructor;
+        lazyRender: {
+            type: BooleanConstructor;
+            default: true;
+        };
+        showHeader: {
+            type: BooleanConstructor;
+            default: true;
+        };
+        lineWidth: (NumberConstructor | StringConstructor)[];
+        lineHeight: (NumberConstructor | StringConstructor)[];
+        beforeChange: PropType<Interceptor>;
+        swipeThreshold: {
+            type: (NumberConstructor | StringConstructor)[];
+            default: number;
+        };
+        titleActiveColor: StringConstructor;
+        titleInactiveColor: StringConstructor;
+    }>> & Readonly<{
+        "onClick-tab"?: ((name: string | number, title: string, event: MouseEvent, disabled: boolean) => any) | undefined;
+        onChange?: ((name: string | number, title: string) => any) | undefined;
+        onRendered?: ((name: string | number, title: string) => any) | undefined;
+        onScroll?: ((name: string | number, title: string) => any) | undefined;
+        "onUpdate:active"?: ((value: string) => any) | undefined;
+    }>, {
+        resize: () => void;
+        scrollTo: (name: Numeric) => void;
+    }, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+        "update:active": (value: string) => any;
+    } & {
+        "click-tab": (name: string | number, title: string, event: MouseEvent, disabled: boolean) => any;
+        change: (name: string | number, title: string) => any;
+        rendered: (name: string | number, title: string) => any;
+        scroll: (name: string | number, title: string) => any;
+    }, PublicProps, {
+        type: TabsType;
+        border: boolean;
+        customClass: string | string[];
+        transparent: boolean;
+        sticky: boolean;
+        shrink: boolean;
+        active: string | number;
+        duration: string | number;
+        animated: boolean;
+        ellipsis: boolean;
+        swipeable: boolean;
+        scrollspy: boolean;
+        offsetTop: string | number;
+        lazyRender: boolean;
+        showHeader: boolean;
+        swipeThreshold: string | number;
+    }, true, {}, {}, GlobalComponents, GlobalDirectives, string, {
+        tabsRef: ({
+            $: ComponentInternalInstance;
+            $data: {};
+            $props: Partial<{
+                type: TabsType;
+                sticky: boolean;
+                ellipsis: boolean;
+                border: boolean;
+                active: string | number;
+                duration: string | number;
+                lazyRender: boolean;
+                offsetTop: string | number;
+                animated: boolean;
+                swipeable: boolean;
+                shrink: boolean;
+                scrollspy: boolean;
+                showHeader: boolean;
+                swipeThreshold: string | number;
+            }> & Omit<{
+                readonly type: TabsType;
+                readonly border: boolean;
+                readonly sticky: boolean;
+                readonly shrink: boolean;
+                readonly active: string | number;
+                readonly duration: string | number;
+                readonly animated: boolean;
+                readonly ellipsis: boolean;
+                readonly swipeable: boolean;
+                readonly scrollspy: boolean;
+                readonly offsetTop: string | number;
+                readonly lazyRender: boolean;
+                readonly showHeader: boolean;
+                readonly swipeThreshold: string | number;
+                readonly color?: string | undefined;
+                readonly background?: string | undefined;
+                readonly lineWidth?: string | number | undefined;
+                readonly lineHeight?: string | number | undefined;
+                readonly beforeChange?: Interceptor | undefined;
+                readonly titleActiveColor?: string | undefined;
+                readonly titleInactiveColor?: string | undefined;
+                readonly onChange?: ((...args: any[]) => any) | undefined | undefined;
+                readonly onScroll?: ((...args: any[]) => any) | undefined | undefined;
+                readonly onRendered?: ((...args: any[]) => any) | undefined | undefined;
+                readonly onClickTab?: ((...args: any[]) => any) | undefined | undefined;
+                readonly "onUpdate:active"?: ((...args: any[]) => any) | undefined | undefined;
+            } & VNodeProps & AllowedComponentProps & ComponentCustomProps, "type" | "border" | "sticky" | "shrink" | "active" | "duration" | "animated" | "ellipsis" | "swipeable" | "scrollspy" | "offsetTop" | "lazyRender" | "showHeader" | "swipeThreshold">;
+            $attrs: Attrs;
+            $refs: {
+                [x: string]: unknown;
+            };
+            $slots: Readonly<{
+                [name: string]: Slot<any> | undefined;
+            }>;
+            $root: ComponentPublicInstance | null;
+            $parent: ComponentPublicInstance | null;
+            $host: Element | null;
+            $emit: (event: "change" | "rendered" | "scroll" | "update:active" | "clickTab", ...args: any[]) => void;
+            $el: any;
+            $options: ComponentOptionsBase<Readonly< ExtractPropTypes<{
+                type: {
+                    type: PropType<TabsType>;
+                    default: TabsType;
+                };
+                color: StringConstructor;
+                border: BooleanConstructor;
+                sticky: BooleanConstructor;
+                shrink: BooleanConstructor;
+                active: {
+                    type: (NumberConstructor | StringConstructor)[];
+                    default: number;
+                };
+                duration: {
+                    type: (NumberConstructor | StringConstructor)[];
+                    default: number;
+                };
+                animated: BooleanConstructor;
+                ellipsis: {
+                    type: BooleanConstructor;
+                    default: true;
+                };
+                swipeable: BooleanConstructor;
+                scrollspy: BooleanConstructor;
+                offsetTop: {
+                    type: (NumberConstructor | StringConstructor)[];
+                    default: number;
+                };
+                background: StringConstructor;
+                lazyRender: {
+                    type: BooleanConstructor;
+                    default: true;
+                };
+                showHeader: {
+                    type: BooleanConstructor;
+                    default: true;
+                };
+                lineWidth: (NumberConstructor | StringConstructor)[];
+                lineHeight: (NumberConstructor | StringConstructor)[];
+                beforeChange: PropType<Interceptor>;
+                swipeThreshold: {
+                    type: (NumberConstructor | StringConstructor)[];
+                    default: number;
+                };
+                titleActiveColor: StringConstructor;
+                titleInactiveColor: StringConstructor;
+            }>> & Readonly<{
+                onChange?: ((...args: any[]) => any) | undefined;
+                onScroll?: ((...args: any[]) => any) | undefined;
+                onRendered?: ((...args: any[]) => any) | undefined;
+                onClickTab?: ((...args: any[]) => any) | undefined;
+                "onUpdate:active"?: ((...args: any[]) => any) | undefined;
+            }>, () => import("vue/jsx-runtime").JSX.Element, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, ("change" | "rendered" | "scroll" | "update:active" | "clickTab")[], string, {
+                type: TabsType;
+                sticky: boolean;
+                ellipsis: boolean;
+                border: boolean;
+                active: string | number;
+                duration: string | number;
+                lazyRender: boolean;
+                offsetTop: string | number;
+                animated: boolean;
+                swipeable: boolean;
+                shrink: boolean;
+                scrollspy: boolean;
+                showHeader: boolean;
+                swipeThreshold: string | number;
+            }, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+                beforeCreate?: (() => void) | (() => void)[];
+                created?: (() => void) | (() => void)[];
+                beforeMount?: (() => void) | (() => void)[];
+                mounted?: (() => void) | (() => void)[];
+                beforeUpdate?: (() => void) | (() => void)[];
+                updated?: (() => void) | (() => void)[];
+                activated?: (() => void) | (() => void)[];
+                deactivated?: (() => void) | (() => void)[];
+                beforeDestroy?: (() => void) | (() => void)[];
+                beforeUnmount?: (() => void) | (() => void)[];
+                destroyed?: (() => void) | (() => void)[];
+                unmounted?: (() => void) | (() => void)[];
+                renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+                renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+                errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+            };
+            $forceUpdate: () => void;
+            $nextTick: nextTick;
+            $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+        } & Readonly<{
+            type: TabsType;
+            sticky: boolean;
+            ellipsis: boolean;
+            border: boolean;
+            active: string | number;
+            duration: string | number;
+            lazyRender: boolean;
+            offsetTop: string | number;
+            animated: boolean;
+            swipeable: boolean;
+            shrink: boolean;
+            scrollspy: boolean;
+            showHeader: boolean;
+            swipeThreshold: string | number;
+        }> & Omit<Readonly< ExtractPropTypes<{
+            type: {
+                type: PropType<TabsType>;
+                default: TabsType;
+            };
+            color: StringConstructor;
+            border: BooleanConstructor;
+            sticky: BooleanConstructor;
+            shrink: BooleanConstructor;
+            active: {
+                type: (NumberConstructor | StringConstructor)[];
+                default: number;
+            };
+            duration: {
+                type: (NumberConstructor | StringConstructor)[];
+                default: number;
+            };
+            animated: BooleanConstructor;
+            ellipsis: {
+                type: BooleanConstructor;
+                default: true;
+            };
+            swipeable: BooleanConstructor;
+            scrollspy: BooleanConstructor;
+            offsetTop: {
+                type: (NumberConstructor | StringConstructor)[];
+                default: number;
+            };
+            background: StringConstructor;
+            lazyRender: {
+                type: BooleanConstructor;
+                default: true;
+            };
+            showHeader: {
+                type: BooleanConstructor;
+                default: true;
+            };
+            lineWidth: (NumberConstructor | StringConstructor)[];
+            lineHeight: (NumberConstructor | StringConstructor)[];
+            beforeChange: PropType<Interceptor>;
+            swipeThreshold: {
+                type: (NumberConstructor | StringConstructor)[];
+                default: number;
+            };
+            titleActiveColor: StringConstructor;
+            titleInactiveColor: StringConstructor;
+        }>> & Readonly<{
+            onChange?: ((...args: any[]) => any) | undefined;
+            onScroll?: ((...args: any[]) => any) | undefined;
+            onRendered?: ((...args: any[]) => any) | undefined;
+            onClickTab?: ((...args: any[]) => any) | undefined;
+            "onUpdate:active"?: ((...args: any[]) => any) | undefined;
+        }>, "type" | "border" | "sticky" | "shrink" | "active" | "duration" | "animated" | "ellipsis" | "swipeable" | "scrollspy" | "offsetTop" | "lazyRender" | "showHeader" | "swipeThreshold"> & ShallowUnwrapRef<() => import("vue/jsx-runtime").JSX.Element> & {} & ComponentCustomProperties & {} & {
+            $props: {
+                onClick?: (...args: any[]) => void;
+            };
+        }) | null;
+    }, any, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+    }, Readonly< ExtractPropTypes<{
+        transparent: {
+            type: BooleanConstructor;
+            default: boolean;
+        };
+        customClass: {
+            type: PropType<string | string[]>;
+            default: string;
+        };
+        type: {
+            type: PropType<TabsType>;
+            default: TabsType;
+        };
+        color: StringConstructor;
+        border: BooleanConstructor;
+        sticky: BooleanConstructor;
+        shrink: BooleanConstructor;
+        active: {
+            type: (NumberConstructor | StringConstructor)[];
+            default: number;
+        };
+        duration: {
+            type: (NumberConstructor | StringConstructor)[];
+            default: number;
+        };
+        animated: BooleanConstructor;
+        ellipsis: {
+            type: BooleanConstructor;
+            default: true;
+        };
+        swipeable: BooleanConstructor;
+        scrollspy: BooleanConstructor;
+        offsetTop: {
+            type: (NumberConstructor | StringConstructor)[];
+            default: number;
+        };
+        background: StringConstructor;
+        lazyRender: {
+            type: BooleanConstructor;
+            default: true;
+        };
+        showHeader: {
+            type: BooleanConstructor;
+            default: true;
+        };
+        lineWidth: (NumberConstructor | StringConstructor)[];
+        lineHeight: (NumberConstructor | StringConstructor)[];
+        beforeChange: PropType<Interceptor>;
+        swipeThreshold: {
+            type: (NumberConstructor | StringConstructor)[];
+            default: number;
+        };
+        titleActiveColor: StringConstructor;
+        titleInactiveColor: StringConstructor;
+    }>> & Readonly<{
+        "onClick-tab"?: ((name: string | number, title: string, event: MouseEvent, disabled: boolean) => any) | undefined;
+        onChange?: ((name: string | number, title: string) => any) | undefined;
+        onRendered?: ((name: string | number, title: string) => any) | undefined;
+        onScroll?: ((name: string | number, title: string) => any) | undefined;
+        "onUpdate:active"?: ((value: string) => any) | undefined;
+    }>, {
+        resize: () => void;
+        scrollTo: (name: Numeric) => void;
+    }, {}, {}, {}, {
+        type: TabsType;
+        border: boolean;
+        customClass: string | string[];
+        transparent: boolean;
+        sticky: boolean;
+        shrink: boolean;
+        active: string | number;
+        duration: string | number;
+        animated: boolean;
+        ellipsis: boolean;
+        swipeable: boolean;
+        scrollspy: boolean;
+        offsetTop: string | number;
+        lazyRender: boolean;
+        showHeader: boolean;
+        swipeThreshold: string | number;
+    }>;
+    __isFragment?: never;
+    __isTeleport?: never;
+    __isSuspense?: never;
+} & ComponentOptionsBase<Readonly< ExtractPropTypes<{
+    transparent: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
+    customClass: {
+        type: PropType<string | string[]>;
+        default: string;
+    };
+    type: {
+        type: PropType<TabsType>;
+        default: TabsType;
+    };
+    color: StringConstructor;
+    border: BooleanConstructor;
+    sticky: BooleanConstructor;
+    shrink: BooleanConstructor;
+    active: {
+        type: (NumberConstructor | StringConstructor)[];
+        default: number;
+    };
+    duration: {
+        type: (NumberConstructor | StringConstructor)[];
+        default: number;
+    };
+    animated: BooleanConstructor;
+    ellipsis: {
+        type: BooleanConstructor;
+        default: true;
+    };
+    swipeable: BooleanConstructor;
+    scrollspy: BooleanConstructor;
+    offsetTop: {
+        type: (NumberConstructor | StringConstructor)[];
+        default: number;
+    };
+    background: StringConstructor;
+    lazyRender: {
+        type: BooleanConstructor;
+        default: true;
+    };
+    showHeader: {
+        type: BooleanConstructor;
+        default: true;
+    };
+    lineWidth: (NumberConstructor | StringConstructor)[];
+    lineHeight: (NumberConstructor | StringConstructor)[];
+    beforeChange: PropType<Interceptor>;
+    swipeThreshold: {
+        type: (NumberConstructor | StringConstructor)[];
+        default: number;
+    };
+    titleActiveColor: StringConstructor;
+    titleInactiveColor: StringConstructor;
+}>> & Readonly<{
+    "onClick-tab"?: ((name: string | number, title: string, event: MouseEvent, disabled: boolean) => any) | undefined;
+    onChange?: ((name: string | number, title: string) => any) | undefined;
+    onRendered?: ((name: string | number, title: string) => any) | undefined;
+    onScroll?: ((name: string | number, title: string) => any) | undefined;
+    "onUpdate:active"?: ((value: string) => any) | undefined;
+}>, {
+    resize: () => void;
+    scrollTo: (name: Numeric) => void;
+}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+    "update:active": (value: string) => any;
+} & {
+    "click-tab": (name: string | number, title: string, event: MouseEvent, disabled: boolean) => any;
+    change: (name: string | number, title: string) => any;
+    rendered: (name: string | number, title: string) => any;
+    scroll: (name: string | number, title: string) => any;
+}, string, {
+    type: TabsType;
+    border: boolean;
+    customClass: string | string[];
+    transparent: boolean;
+    sticky: boolean;
+    shrink: boolean;
+    active: string | number;
+    duration: string | number;
+    animated: boolean;
+    ellipsis: boolean;
+    swipeable: boolean;
+    scrollspy: boolean;
+    offsetTop: string | number;
+    lazyRender: boolean;
+    showHeader: boolean;
+    swipeThreshold: string | number;
+}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    $slots: Readonly<{
+        navLeft?: () => any;
+        navRight?: () => any;
+        navBottom?: () => any;
+        default?: () => any;
+    }> & {
+        navLeft?: () => any;
+        navRight?: () => any;
+        navBottom?: () => any;
+        default?: () => any;
+    };
+})> & Record<string, any>) | ( SFCWithInstall<{
+    new (...args: any[]): CreateComponentPublicInstanceWithMixins<Readonly< ExtractPropTypes<{
+        to: PropType<RouteLocationRaw>;
+        url: StringConstructor;
+        replace: BooleanConstructor;
+    } & {
+        dot: BooleanConstructor;
+        name: (NumberConstructor | StringConstructor)[];
+        badge: (NumberConstructor | StringConstructor)[];
+        title: StringConstructor;
+        disabled: BooleanConstructor;
+        titleClass: PropType<unknown>;
+        titleStyle: PropType<string | CSSProperties>;
+        showZeroBadge: {
+            type: BooleanConstructor;
+            default: true;
+        };
+    }>> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, PublicProps, {
+        replace: boolean;
+        disabled: boolean;
+        dot: boolean;
+        showZeroBadge: boolean;
+    }, true, {}, {}, GlobalComponents, GlobalDirectives, string, {
+        TabRef: ({
+            $: ComponentInternalInstance;
+            $data: {};
+            $props: Partial<{
+                replace: boolean;
+                dot: boolean;
+                disabled: boolean;
+                showZeroBadge: boolean;
+            }> & Omit<{
+                readonly replace: boolean;
+                readonly disabled: boolean;
+                readonly dot: boolean;
+                readonly showZeroBadge: boolean;
+                readonly name?: string | number | undefined;
+                readonly title?: string | undefined;
+                readonly titleClass?: unknown;
+                readonly titleStyle?: string | CSSProperties | undefined;
+                readonly url?: string | undefined;
+                readonly badge?: string | number | undefined;
+                readonly to?: any;
+            } & VNodeProps & AllowedComponentProps & ComponentCustomProps, "replace" | "disabled" | "dot" | "showZeroBadge">;
+            $attrs: Attrs;
+            $refs: {
+                [x: string]: unknown;
+            };
+            $slots: Readonly<{
+                [name: string]: Slot<any> | undefined;
+            }>;
+            $root: ComponentPublicInstance | null;
+            $parent: ComponentPublicInstance | null;
+            $host: Element | null;
+            $emit: (event: string, ...args: any[]) => void;
+            $el: any;
+            $options: ComponentOptionsBase<Readonly< ExtractPropTypes<{
+                to: PropType<RouteLocationRaw>;
+                url: StringConstructor;
+                replace: BooleanConstructor;
+            } & {
+                dot: BooleanConstructor;
+                name: (NumberConstructor | StringConstructor)[];
+                badge: (NumberConstructor | StringConstructor)[];
+                title: StringConstructor;
+                disabled: BooleanConstructor;
+                titleClass: PropType<unknown>;
+                titleStyle: PropType<string | CSSProperties>;
+                showZeroBadge: {
+                    type: BooleanConstructor;
+                    default: true;
+                };
+            }>> & Readonly<{}>, (() => import("vue/jsx-runtime").JSX.Element | undefined) | undefined, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {
+                replace: boolean;
+                dot: boolean;
+                disabled: boolean;
+                showZeroBadge: boolean;
+            }, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+                beforeCreate?: (() => void) | (() => void)[];
+                created?: (() => void) | (() => void)[];
+                beforeMount?: (() => void) | (() => void)[];
+                mounted?: (() => void) | (() => void)[];
+                beforeUpdate?: (() => void) | (() => void)[];
+                updated?: (() => void) | (() => void)[];
+                activated?: (() => void) | (() => void)[];
+                deactivated?: (() => void) | (() => void)[];
+                beforeDestroy?: (() => void) | (() => void)[];
+                beforeUnmount?: (() => void) | (() => void)[];
+                destroyed?: (() => void) | (() => void)[];
+                unmounted?: (() => void) | (() => void)[];
+                renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+                renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+                errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+            };
+            $forceUpdate: () => void;
+            $nextTick: nextTick;
+            $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+        } & Readonly<{
+            replace: boolean;
+            dot: boolean;
+            disabled: boolean;
+            showZeroBadge: boolean;
+        }> & Omit<Readonly< ExtractPropTypes<{
+            to: PropType<RouteLocationRaw>;
+            url: StringConstructor;
+            replace: BooleanConstructor;
+        } & {
+            dot: BooleanConstructor;
+            name: (NumberConstructor | StringConstructor)[];
+            badge: (NumberConstructor | StringConstructor)[];
+            title: StringConstructor;
+            disabled: BooleanConstructor;
+            titleClass: PropType<unknown>;
+            titleStyle: PropType<string | CSSProperties>;
+            showZeroBadge: {
+                type: BooleanConstructor;
+                default: true;
+            };
+        }>> & Readonly<{}>, "replace" | "disabled" | "dot" | "showZeroBadge"> & ShallowUnwrapRef<{}> & {} & ComponentCustomProperties & {} & {
+            $props: {
+                onClick?: (...args: any[]) => void;
+            };
+        }) | ({
+            $: ComponentInternalInstance;
+            $data: {};
+            $props: Partial<{
+                replace: boolean;
+                dot: boolean;
+                disabled: boolean;
+                showZeroBadge: boolean;
+            }> & Omit<{
+                readonly replace: boolean;
+                readonly disabled: boolean;
+                readonly dot: boolean;
+                readonly showZeroBadge: boolean;
+                readonly name?: string | number | undefined;
+                readonly title?: string | undefined;
+                readonly titleClass?: unknown;
+                readonly titleStyle?: string | CSSProperties | undefined;
+                readonly url?: string | undefined;
+                readonly badge?: string | number | undefined;
+                readonly to?: any;
+            } & VNodeProps & AllowedComponentProps & ComponentCustomProps, "replace" | "disabled" | "dot" | "showZeroBadge">;
+            $attrs: Attrs;
+            $refs: {
+                [x: string]: unknown;
+            };
+            $slots: Readonly<{
+                [name: string]: Slot<any> | undefined;
+            }>;
+            $root: ComponentPublicInstance | null;
+            $parent: ComponentPublicInstance | null;
+            $host: Element | null;
+            $emit: (event: string, ...args: any[]) => void;
+            $el: any;
+            $options: ComponentOptionsBase<Readonly< ExtractPropTypes<{
+                to: PropType<RouteLocationRaw>;
+                url: StringConstructor;
+                replace: BooleanConstructor;
+            } & {
+                dot: BooleanConstructor;
+                name: (NumberConstructor | StringConstructor)[];
+                badge: (NumberConstructor | StringConstructor)[];
+                title: StringConstructor;
+                disabled: BooleanConstructor;
+                titleClass: PropType<unknown>;
+                titleStyle: PropType<string | CSSProperties>;
+                showZeroBadge: {
+                    type: BooleanConstructor;
+                    default: true;
+                };
+            }>> & Readonly<{}>, (() => import("vue/jsx-runtime").JSX.Element | undefined) | undefined, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {
+                replace: boolean;
+                dot: boolean;
+                disabled: boolean;
+                showZeroBadge: boolean;
+            }, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+                beforeCreate?: (() => void) | (() => void)[];
+                created?: (() => void) | (() => void)[];
+                beforeMount?: (() => void) | (() => void)[];
+                mounted?: (() => void) | (() => void)[];
+                beforeUpdate?: (() => void) | (() => void)[];
+                updated?: (() => void) | (() => void)[];
+                activated?: (() => void) | (() => void)[];
+                deactivated?: (() => void) | (() => void)[];
+                beforeDestroy?: (() => void) | (() => void)[];
+                beforeUnmount?: (() => void) | (() => void)[];
+                destroyed?: (() => void) | (() => void)[];
+                unmounted?: (() => void) | (() => void)[];
+                renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+                renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+                errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+            };
+            $forceUpdate: () => void;
+            $nextTick: nextTick;
+            $watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+        } & Readonly<{
+            replace: boolean;
+            dot: boolean;
+            disabled: boolean;
+            showZeroBadge: boolean;
+        }> & Omit<Readonly< ExtractPropTypes<{
+            to: PropType<RouteLocationRaw>;
+            url: StringConstructor;
+            replace: BooleanConstructor;
+        } & {
+            dot: BooleanConstructor;
+            name: (NumberConstructor | StringConstructor)[];
+            badge: (NumberConstructor | StringConstructor)[];
+            title: StringConstructor;
+            disabled: BooleanConstructor;
+            titleClass: PropType<unknown>;
+            titleStyle: PropType<string | CSSProperties>;
+            showZeroBadge: {
+                type: BooleanConstructor;
+                default: true;
+            };
+        }>> & Readonly<{}>, "replace" | "disabled" | "dot" | "showZeroBadge"> & ShallowUnwrapRef<() => import("vue/jsx-runtime").JSX.Element | undefined> & {} & ComponentCustomProperties & {} & {
+            $props: {
+                onClick?: (...args: any[]) => void;
+            };
+        }) | null;
+    }, any, ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+    }, Readonly< ExtractPropTypes<{
+        to: PropType<RouteLocationRaw>;
+        url: StringConstructor;
+        replace: BooleanConstructor;
+    } & {
+        dot: BooleanConstructor;
+        name: (NumberConstructor | StringConstructor)[];
+        badge: (NumberConstructor | StringConstructor)[];
+        title: StringConstructor;
+        disabled: BooleanConstructor;
+        titleClass: PropType<unknown>;
+        titleStyle: PropType<string | CSSProperties>;
+        showZeroBadge: {
+            type: BooleanConstructor;
+            default: true;
+        };
+    }>> & Readonly<{}>, {}, {}, {}, {}, {
+        replace: boolean;
+        disabled: boolean;
+        dot: boolean;
+        showZeroBadge: boolean;
+    }>;
+    __isFragment?: never;
+    __isTeleport?: never;
+    __isSuspense?: never;
+} & ComponentOptionsBase<Readonly< ExtractPropTypes<{
+    to: PropType<RouteLocationRaw>;
+    url: StringConstructor;
+    replace: BooleanConstructor;
+} & {
+    dot: BooleanConstructor;
+    name: (NumberConstructor | StringConstructor)[];
+    badge: (NumberConstructor | StringConstructor)[];
+    title: StringConstructor;
+    disabled: BooleanConstructor;
+    titleClass: PropType<unknown>;
+    titleStyle: PropType<string | CSSProperties>;
+    showZeroBadge: {
+        type: BooleanConstructor;
+        default: true;
+    };
+}>> & Readonly<{}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, {
+    replace: boolean;
+    disabled: boolean;
+    dot: boolean;
+    showZeroBadge: boolean;
+}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & VNodeProps & AllowedComponentProps & ComponentCustomProps & (new () => {
+    $slots: {
+        title?(_: {}): any;
+        default?(_: {}): any;
     };
 })> & Record<string, any>))[];
 export default _default;

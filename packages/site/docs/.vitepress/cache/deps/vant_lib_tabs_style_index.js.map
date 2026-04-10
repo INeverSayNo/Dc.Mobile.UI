@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/tabs/style/index.js"],
+  "sourcesContent": ["require(\"../../style/base.css\");\nrequire(\"../../sticky/index.css\");\nrequire(\"../../swipe/index.css\");\nrequire(\"../index.css\");\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AACA;AACA;AACA;",
+  "names": []
+}
