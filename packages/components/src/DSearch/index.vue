@@ -2,10 +2,9 @@
 import { Search, searchProps } from "vant";
 import "vant/lib/search/style/index";
 import DThemeProvider from "../DThemeProvider/index.vue";
-import DAliIcon from "../DcIcon/icon.vue";
+import DAliIcon from "../DcAliIcon/index.vue";
 import { shallowRef, useAttrs } from "vue";
 import { SearchExpose } from "vant/lib/search/types";
-
 
 defineOptions({
   name: "DSearch",
@@ -17,7 +16,7 @@ defineProps({
     type: Boolean,
     default: true,
   },
-})
+});
 
 const attrs = useAttrs();
 

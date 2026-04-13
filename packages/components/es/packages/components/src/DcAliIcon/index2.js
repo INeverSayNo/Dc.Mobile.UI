@@ -1,6 +1,6 @@
 import { withInstall as e } from "../utils/withInstall.js";
-import t from "./icon.js";
-//#region src/DcIcon/index.ts
+import t from "./index.js";
+//#region src/DcAliIcon/index.ts
 var n = e(t);
 //#endregion
 export { n as default };

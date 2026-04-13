@@ -1,4 +1,4 @@
-import e from "../DcIcon/icon.js";
+import e from "../DcAliIcon/index.js";
 import { searchProps as t } from "../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/es/search/Search.js";
 import { Search as n } from "../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/es/search/index.js";
 import "../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/search/style/index.js";

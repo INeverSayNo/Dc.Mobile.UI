@@ -16,7 +16,7 @@ function u(u, d) {
 				enableRotate: !1,
 				enableRotateGestures: !1
 			}, r = t || new BMapGL.Point(104.08184, 30.702176);
-			p.value = new BMapGL.Map(f, e), p.value.centerAndZoom(r, n || 14.08), p.value.enableScrollWheelZoom(), x(), w(), await o(), p.value.setMapStyleV2({
+			p.value = new BMapGL.Map(f, e), p.value.centerAndZoom(r, n || 14.08), u.scrollWheelZoom && p.value.enableScrollWheelZoom(), x(), w(), await o(), p.value.setMapStyleV2({
 				styleId: "21f946c5cc0b3dc64ba1af3378c32c3a",
 				version: "v3"
 			});

@@ -1,5 +1,5 @@
 import { makeInstaller as e } from "./utils/withInstall.js";
-import t from "./DcIcon/index.js";
+import t from "./DcAliIcon/index2.js";
 import n from "./DInput/index2.js";
 import r from "./DSearch/index2.js";
 import i from "./DCard/index2.js";

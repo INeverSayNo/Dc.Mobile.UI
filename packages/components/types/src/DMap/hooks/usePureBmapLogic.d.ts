@@ -1,6 +1,6 @@
-import { IEmits, IProps } from '../type';
-export default function usePureBmapLogic(props: IProps, emits: IEmits): {
-    MapId: any;
+import { DMapEmits, DMapIProps } from '../type';
+export default function usePureBmapLogic(props: DMapIProps, emits: DMapEmits): {
+    MapId: string;
     MapInstance: any;
     initMap: (center?: BMapGL.Point, zoomLevel?: number) => void;
     setMapCenter: (lat: number, lng: number, zoomLevel?: number) => void;

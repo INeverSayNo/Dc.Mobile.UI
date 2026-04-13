@@ -1,3 +1,3 @@
 import { ShallowRef } from 'vue';
-import { IProps, IEmits } from '../type';
-export default function useSatelliteMap(props: IProps, emits: IEmits, mapInstance: ShallowRef<BMapGL.Map | null>): void;
+import { DMapIProps, DMapEmits } from '../type';
+export default function useSatelliteMap(props: DMapIProps, emits: DMapEmits, mapInstance: ShallowRef<BMapGL.Map | null>): void;

@@ -1,8 +1,8 @@
 import { computed as e, createElementBlock as t, createElementVNode as n, defineComponent as r, normalizeClass as i, onBeforeMount as a, openBlock as o } from "vue";
-//#region src/DcIcon/icon.vue?vue&type=script&setup=true&lang.ts
+//#region src/DcAliIcon/index.vue?vue&type=script&setup=true&lang.ts
 var s = ["width", "height"], c = ["href"], l = /* @__PURE__ */ r({
 	name: "DcAliIcon",
-	__name: "icon",
+	__name: "index",
 	props: {
 		prefixCls: { default: "icon" },
 		iconName: { default: "" },

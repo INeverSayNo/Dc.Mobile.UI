@@ -8,4 +8,4 @@ export declare const DcIcon: SFCWithInstall<DefineComponent<DcIconProps, {}, {},
     height: string | number;
 }, {}, {}, {}, string, ComponentProvideOptions, false, {}, SVGSVGElement>> & Record<string, any>;
 export default DcIcon;
-export * from './icon.vue';
+export * from './index.vue';

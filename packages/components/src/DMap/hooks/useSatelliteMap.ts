@@ -1,9 +1,9 @@
 import { watch, type ShallowRef } from "vue"
-import { IProps, IEmits } from "../type"
+import { DMapIProps, DMapEmits } from "../type"
 
 export default function useSatelliteMap(
-  props: IProps,
-  emits: IEmits,
+  props: DMapIProps,
+  emits: DMapEmits,
   mapInstance: ShallowRef<BMapGL.Map | null>,
 ) {
   const setSatelliteLayer = ([showTerrain, mapInstance]: [

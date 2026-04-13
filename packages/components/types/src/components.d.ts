@@ -1,4 +1,4 @@
-export * from './DcIcon';
+export * from './DcAliIcon';
 export * from './DInput';
 export * from './DSearch';
 export * from './DCard';

@@ -1,4 +1,4 @@
-import DcIcon from './icon.vue';
+import DcIcon from "./index.vue";
 
 /**
  * 定义props类型
@@ -9,7 +9,6 @@ export interface DcIconProps {
   width?: string | number;
   height?: string | number;
 }
-
 
 /**
  * 定义instance类型

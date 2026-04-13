@@ -1,1 +1,1 @@
-const e=require(`../../../../_virtual/_plugin-vue_export-helper.js`),t=require(`./index.vue_vue_type_script_setup_true_lang.js`);;/* empty css                                                       */var n=e.default(t.default,[[`__scopeId`,`data-v-fe7607f9`]]);exports.default=n;
+const e=require(`../../../../_virtual/_plugin-vue_export-helper.js`),t=require(`./index.vue_vue_type_script_setup_true_lang.js`);;/* empty css                                                       */var n=e.default(t.default,[[`__scopeId`,`data-v-c5683ae1`]]);exports.default=n;

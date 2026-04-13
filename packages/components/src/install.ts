@@ -1,4 +1,4 @@
-import DcAliIcon from "./DcIcon";
+import DcAliIcon from "./DcAliIcon";
 import DInput from "./DInput";
 import DSearch from "./DSearch";
 import DCard from "./DCard";
@@ -21,4 +21,14 @@ declare module "@vue/runtime-core" {
     DMap: typeof DMap;
   }
 }
-export default [DcAliIcon, DInput, DSearch, DCard, DCell, DNoData, DTab, DTabs, DMap];
+export default [
+  DcAliIcon,
+  DInput,
+  DSearch,
+  DCard,
+  DCell,
+  DNoData,
+  DTab,
+  DTabs,
+  DMap,
+];

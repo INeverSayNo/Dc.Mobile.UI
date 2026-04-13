@@ -1,4 +1,4 @@
-import e from "./DcIcon/index.js";
+import e from "./DcAliIcon/index2.js";
 import t from "./DInput/index2.js";
 import n from "./DSearch/index2.js";
 import r from "./DCard/index2.js";

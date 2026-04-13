@@ -1,0 +1,1 @@
+const e=require(`./index.vue_vue_type_script_setup_true_lang.js`);;/* empty css                                                       */var t=require(`../../../../_virtual/_plugin-vue_export-helper.js`).default(e.default,[[`__scopeId`,`data-v-1b85df5a`]]);exports.default=t;

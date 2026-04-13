@@ -98,6 +98,10 @@ export default defineConfig({
               link: "/components/DCard",
             },
             {
+              text: "图标 DcAliIcon",
+              link: "/components/DcAliIcon",
+            },
+            {
               text: "单元格 DCell",
               link: "/components/DCell",
             },

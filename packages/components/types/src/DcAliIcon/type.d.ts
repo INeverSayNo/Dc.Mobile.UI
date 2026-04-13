@@ -1,4 +1,4 @@
-import { default as DcIcon } from './icon.vue';
+import { default as DcIcon } from './index.vue';
 /**
  * 定义props类型
  */

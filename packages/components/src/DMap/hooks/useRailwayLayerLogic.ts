@@ -1,5 +1,5 @@
 // 可解决百度地图缩放小数位>0.5时，标注显示过大问题
-import type { IProps, IEmits, ChinaPolygonRsp } from "../type";
+import type { DMapIProps, DMapEmits, ChinaPolygonRsp } from "../type";
 import { nextTick, shallowRef, watch, type ShallowRef } from "vue";
 import { booleanPointInPolygon, point } from "@turf/turf";
 import useCreateCustomLayer from "./useCreateCustomLayer";
@@ -10,8 +10,8 @@ import { bd09towgs84, isMobile } from "../utils/coordTranslate";
 import { createReactiveDpiLayer } from "./createDynamicDpiLayer";
 
 export default function useRailwayLayerLogic(
-  props: IProps,
-  emits: IEmits,
+  props: DMapIProps,
+  emits: DMapEmits,
   mapInstance: ShallowRef<BMapGL.Map | null>,
 ) {
   const { GetBureaByLatlng, GetLineByLatlng } = useDMapApi();

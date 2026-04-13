@@ -1,4 +1,4 @@
-import "./DcIcon/index.js";
+import "./DcAliIcon/index2.js";
 import "./DInput/index2.js";
 import "./DSearch/index2.js";
 import "./DCard/index2.js";

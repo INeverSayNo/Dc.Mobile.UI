@@ -1,6 +1,6 @@
-import { IProps, IEmits } from '../type';
+import { DMapIProps, DMapEmits } from '../type';
 import { ShallowRef } from 'vue';
-export default function useRailwayLayerLogic(props: IProps, emits: IEmits, mapInstance: ShallowRef<BMapGL.Map | null>): {
+export default function useRailwayLayerLogic(props: DMapIProps, emits: DMapEmits, mapInstance: ShallowRef<BMapGL.Map | null>): {
     removeRailwayLineLayer: () => void;
     railwayLineClickEvent: (evt: any) => Promise<void>;
     addRailwayLineLayer: (lineName?: string) => Promise<void>;

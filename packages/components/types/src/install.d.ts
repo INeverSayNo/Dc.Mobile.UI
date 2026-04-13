@@ -1,4 +1,4 @@
-import { default as DcAliIcon } from './DcIcon';
+import { default as DcAliIcon } from './DcAliIcon';
 import { default as DInput } from './DInput';
 import { default as DSearch } from './DSearch';
 import { default as DCard } from './DCard';
@@ -9,7 +9,7 @@ import { default as DTab } from './DTab';
 import { default as DMap } from './DMap';
 import { SFCWithInstall } from './utils/typescript';
 import { DefineComponent, ComponentOptionsMixin, PublicProps, ComponentProvideOptions, CreateComponentPublicInstanceWithMixins, ExtractPropTypes, PropType, HTMLAttributes, GlobalComponents, GlobalDirectives, ComponentInternalInstance, VNodeProps, AllowedComponentProps, ComponentCustomProps, Attrs, Slot, ComponentPublicInstance, ComponentOptionsBase, DebuggerEvent, nextTick, WatchOptions, WatchStopHandle, ShallowUnwrapRef, ComponentCustomProperties, CSSProperties } from 'vue';
-import { DcIconProps } from './DcIcon/type';
+import { DcIconProps } from './DcAliIcon/type';
 import { FieldTextAlign, FieldEnterKeyHint, FieldClearTrigger, FieldFormatTrigger, SearchShape, CellSize, CellArrowDirection, TabsType } from 'vant';
 import { OnCleanup } from '@vue/reactivity';
 import { DCardProps } from './DCard/types';
