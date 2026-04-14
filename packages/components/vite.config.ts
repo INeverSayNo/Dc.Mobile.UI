@@ -5,7 +5,7 @@ import dts from "vite-plugin-dts";
 import { DcResolver } from "./build/resolver";
 import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
-import pxtorem from "postcss-pxtorem";
+import pxToViewport from "postcss-px-to-viewport";
 import UnoCSS from "unocss/vite";
 import { presetWind3 } from "unocss";
 
@@ -14,10 +14,12 @@ export default defineConfig(() => {
     css: {
       postcss: {
         plugins: [
-          pxtorem({
-            rootValue: 37.5,
-            propList: ["*"],
+          pxToViewport({
+            viewportWidth: 375, // 设计稿宽度，对应原 rootValue: 37.5
+            unitPrecision: 5,
+            viewportUnit: "vw",
             selectorBlackList: [],
+            minPixelValue: 1,
           }),
         ],
       },

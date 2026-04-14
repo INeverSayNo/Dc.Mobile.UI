@@ -1,13 +1,14 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import pxtorem from "postcss-pxtorem";
+import pxToViewport from "postcss-px-to-viewport";
+
 import UnoCSS from "unocss/vite";
 import { presetWind3 } from "unocss";
 import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-   resolve: {
+  resolve: {
     alias: {
       // 本地开发时直接指向 components 源码，支持热更新
       "dc-mobile-ui": resolve(__dirname, "../components/src/index.ts"),
@@ -16,10 +17,12 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [
-        pxtorem({
-          rootValue: 37.5,
-          propList: ["*"],
+        pxToViewport({
+          viewportWidth: 375, // 设计稿宽度，对应原 rootValue: 37.5
+          unitPrecision: 5,
+          viewportUnit: "vw",
           selectorBlackList: [],
+          minPixelValue: 1,
         }),
       ],
     },

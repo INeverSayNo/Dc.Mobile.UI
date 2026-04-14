@@ -1,109 +1,109 @@
 {
-  "hash": "a1ae2051",
+  "hash": "1b5a0198",
   "configHash": "a8afd8eb",
-  "lockfileHash": "664c80a2",
-  "browserHash": "3e0e12e4",
+  "lockfileHash": "1dc51c89",
+  "browserHash": "0c50b327",
   "optimized": {
     "vue": {
       "src": "../../../../../../node_modules/.pnpm/vue@3.5.31_typescript@5.5.4/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "78abaff8",
+      "fileHash": "ac264bb2",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../../../node_modules/.pnpm/@vue+devtools-api@7.3.8/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "9eae6214",
+      "fileHash": "6adc085a",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../../../node_modules/.pnpm/@vueuse+core@11.0.1_vue@3.5.31_typescript@5.5.4_/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "2fc8f98e",
+      "fileHash": "bbd3eb61",
       "needsInterop": false
     },
     "vite-plugin-vitepress-demo/theme": {
       "src": "../../../../../../node_modules/.pnpm/vite-plugin-vitepress-demo@2.2.1_typescript@5.5.4_vitepress@1.3.3_@algolia+client-search@4.24_ocjrp5h7nir5jevqrctfhinhmm/node_modules/vite-plugin-vitepress-demo/dist/theme/index.mjs",
       "file": "vite-plugin-vitepress-demo_theme.js",
-      "fileHash": "9f98dc88",
+      "fileHash": "dc7d6bd7",
       "needsInterop": false
     },
     "ant-design-vue": {
       "src": "../../../../../../node_modules/.pnpm/ant-design-vue@4.2.3_vue@3.5.31_typescript@5.5.4_/node_modules/ant-design-vue/es/index.js",
       "file": "ant-design-vue.js",
-      "fileHash": "53578bfb",
+      "fileHash": "1df1e125",
       "needsInterop": false
     },
     "vant": {
       "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/es/index.mjs",
       "file": "vant.js",
-      "fileHash": "b2b3a830",
+      "fileHash": "a2b4160e",
       "needsInterop": false
     },
     "highlight.js/lib/core": {
       "src": "../../../../../../node_modules/.pnpm/highlight.js@11.10.0/node_modules/highlight.js/es/core.js",
       "file": "highlight__js_lib_core.js",
-      "fileHash": "db7f6cdc",
+      "fileHash": "ec5aaa9d",
       "needsInterop": false
     },
     "highlight.js/lib/languages/typescript": {
       "src": "../../../../../../node_modules/.pnpm/highlight.js@11.10.0/node_modules/highlight.js/es/languages/typescript.js",
       "file": "highlight__js_lib_languages_typescript.js",
-      "fileHash": "f625ffc3",
+      "fileHash": "9a4e825b",
       "needsInterop": false
     },
     "pinia": {
       "src": "../../../../../../node_modules/.pnpm/pinia@3.0.4_typescript@6.0.2_vue@3.5.31_typescript@6.0.2_/node_modules/pinia/dist/pinia.mjs",
       "file": "pinia.js",
-      "fileHash": "7220fb30",
+      "fileHash": "15f5bde2",
       "needsInterop": false
     },
-    "vant/lib/search/style/index": {
-      "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/search/style/index.js",
-      "file": "vant_lib_search_style_index.js",
-      "fileHash": "567f6a3b",
-      "needsInterop": true
-    },
-    "vant/lib/tab/style/index": {
-      "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/tab/style/index.js",
-      "file": "vant_lib_tab_style_index.js",
-      "fileHash": "e7772fb1",
+    "vant/lib/tabs/style/index": {
+      "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/tabs/style/index.js",
+      "file": "vant_lib_tabs_style_index.js",
+      "fileHash": "515b84b5",
       "needsInterop": true
     },
     "vant/lib/image/style/index": {
       "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/image/style/index.js",
       "file": "vant_lib_image_style_index.js",
-      "fileHash": "43719c43",
+      "fileHash": "c5654a57",
       "needsInterop": true
     },
-    "vant/lib/tabs/style/index": {
-      "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/tabs/style/index.js",
-      "file": "vant_lib_tabs_style_index.js",
-      "fileHash": "5555f286",
+    "vant/lib/tab/style/index": {
+      "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/tab/style/index.js",
+      "file": "vant_lib_tab_style_index.js",
+      "fileHash": "0fd9644b",
+      "needsInterop": true
+    },
+    "vant/lib/search/style/index": {
+      "src": "../../../../../../node_modules/.pnpm/vant@4.9.24_vue@3.5.31_typescript@6.0.2_/node_modules/vant/lib/search/style/index.js",
+      "file": "vant_lib_search_style_index.js",
+      "fileHash": "2e9231f2",
       "needsInterop": true
     },
     "@turf/turf": {
       "src": "../../../../../../node_modules/.pnpm/@turf+turf@7.3.4/node_modules/@turf/turf/dist/esm/index.js",
       "file": "@turf_turf.js",
-      "fileHash": "d01f7ee3",
+      "fileHash": "2769aafd",
       "needsInterop": false
     },
     "dc-tools": {
       "src": "../../../../../../node_modules/.pnpm/dc-tools@2.0.11_@babel+core@7.29.0_@zxing+library@0.21.3/node_modules/dc-tools/lib/index.esm.js",
       "file": "dc-tools.js",
-      "fileHash": "d652e9b5",
+      "fileHash": "fc91cdf4",
       "needsInterop": false
     }
   },
   "chunks": {
+    "chunk-WXTB5RXS": {
+      "file": "chunk-WXTB5RXS.js"
+    },
     "chunk-PIW5J7CA": {
       "file": "chunk-PIW5J7CA.js"
     },
     "chunk-UXYYIROQ": {
       "file": "chunk-UXYYIROQ.js"
-    },
-    "chunk-WXTB5RXS": {
-      "file": "chunk-WXTB5RXS.js"
     },
     "chunk-HXJUR37L": {
       "file": "chunk-HXJUR37L.js"

@@ -1,8 +1,4 @@
 import {
-  badge_exports,
-  init_badge
-} from "./chunk-UXYYIROQ.js";
-import {
   init_sticky,
   init_swipe,
   init_tabs,
@@ -10,6 +6,10 @@ import {
   swipe_exports,
   tabs_exports
 } from "./chunk-WXTB5RXS.js";
+import {
+  badge_exports,
+  init_badge
+} from "./chunk-UXYYIROQ.js";
 import {
   base_exports,
   init_base

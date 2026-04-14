@@ -160,7 +160,7 @@ export default defineConfig(async ({ mode }) => {
 
 ### 注意⚠️
 
-你需要在项目中显式导入<code>import 'amfe-flexible'</code>;以免样式错乱. 基于<code>Vant</code>的组件均采用透明代理机制, 你可以使用 <code>Ref</code> 直接获取底层 <code>Vant</code> 组件的 <code>Instance</code> 来消费
+ 基于<code>Vant</code>的组件均采用透明代理机制, 你可以使用 <code>Ref</code> 直接获取底层 <code>Vant</code> 组件的 <code>Instance</code> 来消费
 
 <style>
 :root {

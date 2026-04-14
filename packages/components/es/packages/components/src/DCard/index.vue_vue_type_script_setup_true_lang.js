@@ -31,7 +31,7 @@ var v = { key: 2 }, y = /* @__PURE__ */ c({
 	emits: ["clickFooter", "clickHeader"],
 	setup(c, { emit: y }) {
 		let b = c, x = y, S = g(), C = f(!1), w = () => {
-			x("clickFooter"), b.isShowCollapse && (C.value = !0);
+			x("clickFooter"), b.isShowCollapse && (C.value = !C.value);
 		};
 		return (f, g) => (d(), r(n, null, {
 			default: _(() => [o("div", {
@@ -50,7 +50,10 @@ var v = { key: 2 }, y = /* @__PURE__ */ c({
 					dashed: c.dividerDashed,
 					style: { margin: "8px 0" }
 				}, null, 8, ["dashed"])) : i("", !0),
-				C.value ? (d(), a("div", v, [p(f.$slots, "more")])) : i("", !0),
+				C.value ? (d(), a("div", v, [p(f.$slots, "more"), s(h(t), {
+					dashed: c.dividerDashed,
+					style: { margin: "8px 0" }
+				}, null, 8, ["dashed"])])) : i("", !0),
 				c.showFooter ? p(f.$slots, "footer", { key: 3 }, () => [o("div", {
 					class: l(["dc-font-size-12px dc-flex dc-items-center", {
 						"dc-justify-between": c.footerLayout === "between",
@@ -58,7 +61,7 @@ var v = { key: 2 }, y = /* @__PURE__ */ c({
 						"dc-justify-end": c.footerLayout === "right"
 					}]),
 					onClick: w
-				}, [o("span", null, m(c.footerTitle), 1), s(h(e), { name: "arrow-down" })], 2)]) : i("", !0)
+				}, [o("span", null, m(C.value ? "收起" : c.footerTitle), 1), s(h(e), { name: C.value ? "arrow-up" : "arrow-down" }, null, 8, ["name"])], 2)]) : i("", !0)
 			], 6)]),
 			_: 3
 		}));

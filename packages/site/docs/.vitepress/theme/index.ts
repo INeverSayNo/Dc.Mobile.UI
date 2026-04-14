@@ -9,7 +9,6 @@ import Login from "./components/login.vue";
 import TypesDialog from "./components/typesDialog.vue";
 import DocLayout from "./components/DocLayout.vue";
 import DcMobileUI from "dc-mobile-ui";
-// import 'amfe-flexible'
 
 const GATEWAY_URL = `https://gateway.dczhiyun.com`
 
