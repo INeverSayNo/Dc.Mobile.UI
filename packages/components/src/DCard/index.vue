@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<DCardProps>(), {
   shadow: false,
   customClass: "",
   footerTitle: "查看更多信息",
-  showFooter: true
+  showFooter: true,
 });
 
 const emits = defineEmits<DCardEmits>();
@@ -31,7 +31,7 @@ const showMore = ref(false);
 const clickFooter = () => {
   emits("clickFooter");
   if (props.isShowCollapse) {
-    showMore.value = true;
+    showMore.value = !showMore.value;
   }
 };
 </script>
@@ -51,9 +51,14 @@ const clickFooter = () => {
         style="margin: 8px 0"
       ></Divider>
       <slot></slot>
-      <Divider v-if="showFooter" :dashed="dividerDashed" style="margin: 8px 0"></Divider>
+      <Divider
+        v-if="showFooter"
+        :dashed="dividerDashed"
+        style="margin: 8px 0"
+      ></Divider>
       <div v-if="showMore">
         <slot name="more"></slot>
+        <Divider :dashed="dividerDashed" style="margin: 8px 0"></Divider>
       </div>
       <slot v-if="showFooter" name="footer">
         <div
@@ -65,8 +70,8 @@ const clickFooter = () => {
           }"
           @click="clickFooter"
         >
-          <span>{{ footerTitle }}</span>
-          <Icon name="arrow-down"></Icon>
+          <span>{{ showMore ? "收起" : footerTitle }}</span>
+          <Icon :name="showMore ? 'arrow-up' : 'arrow-down'"></Icon>
         </div>
       </slot>
     </div>
